@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php
+session_start();
 $con = mysqli_connect("localhost", "root", "", "dream-book");//connection variable
 
 if(mysqli_connect_errno())
