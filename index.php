@@ -11,22 +11,14 @@
 # **************************************************************************** # -->
 
 <?php  
-$con = mysqli_connect("localhost", "root", "", "dream-book"); //Connection variable
-
-if(mysqli_connect_errno()) 
-{
-	echo "Failed to connect: " . mysqli_connect_errno();
-}
-
-$query = mysqli_query($con, "INSERT INTO test VALUES ('2', 'Optimus Prime')");
-
+require 'config/config.php';
 ?>
 
 <html>
 <head>
-	<title>Welcome to Swirlfeed</title>
+	<title>Dreambook</title>
 </head>
 <body>
-	Hello Reece!!!!!
+	Hello Joe!!!!!
 </body>
 </html>
