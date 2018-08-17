@@ -139,6 +139,9 @@ body{
     cursor:pointer; 
     outline:none; 
 } 
+.forget{
+    color: #000;
+}
 .sub-footer{
     position:absolute; 
     width:100%; 
