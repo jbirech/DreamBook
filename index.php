@@ -10,15 +10,10 @@
 #                                                                              #
 # **************************************************************************** # -->
 
-<?php  
-require 'config/config.php';
+<?php
+include("includes/header.php");
+session_destroy();
 ?>
-
-<html>
-<head>
-	<title>Dreambook</title>
-</head>
-<body>
 	Hello Joe!!!!!
 </body>
 </html>
