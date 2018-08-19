@@ -54,12 +54,12 @@ else
             </a>
 
             <a href="#">
-                <i class="fa fa-users fa-lg">       
+                <i class="fa fa-users fa-lg">
                 </i>
             </a>
 
             <a href="#">
-                <i class="fa fa-cog fa-lg">       
+                <i class="fa fa-cog fa-lg">
                 </i>
             </a>
             <a href="includes/handlers/logout.php">
