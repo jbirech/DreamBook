@@ -35,7 +35,7 @@ else
         </div>
 
         <nav>
-            <a href="#">
+            <a href="<?php echo $userLoggedIn; ?>">
                 <?php echo $user['first_name'];?>
             </a>
 
@@ -60,6 +60,10 @@ else
 
             <a href="#">
                 <i class="fa fa-cog fa-lg">       
+                </i>
+            </a>
+            <a href="includes/handlers/logout.php">
+                <i class="fa fa-sign-out fa-lg">       
                 </i>
             </a>
         </nav>
