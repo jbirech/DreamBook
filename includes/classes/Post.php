@@ -83,7 +83,7 @@ class Post {
 				}
 
 				
-
+                    //scrolling back to the first post posted 
 					if($num_iterations++ < $start)
 						continue; 
 
@@ -186,6 +186,8 @@ class Post {
 
 			} //End while loop
 
+
+            //.= means append
 			if($count > $limit) 
 				$str .= "<input type='hidden' class='nextPage' value='" . ($page + 1) . "'>
 							<input type='hidden' class='noMorePosts' value='false'>";
