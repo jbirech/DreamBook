@@ -63,7 +63,7 @@ else
                 </i>
             </a>
             <a href="includes/handlers/logout.php">
-                <i class="fa fa-sign-out fa-lg">       
+                <i class="fa fa-sign-out-alt fa-lg">       
                 </i>
             </a>
         </nav>
