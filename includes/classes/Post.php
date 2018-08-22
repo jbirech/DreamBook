@@ -82,7 +82,9 @@ class Post {
 					continue;
 				}
 
-				
+				$user_logged_obj = new User($this->con, $userLoggedIn);
+				if($user_logged_obj->isFriend($added_by))
+				{			
                     //scrolling back to the first post posted 
 					if($num_iterations++ < $start)
 						continue; 
@@ -182,6 +184,7 @@ class Post {
 
 							</div>
 							<hr>";
+				}
 				
 
 			} //End while loop
