@@ -46,11 +46,11 @@ if (isset($_POST['post']))
 			<hr>
 		</form>
 
-		<!-- 
 		
-		// $post = new Post($con, $userLoggedIn);
-		// $post->loadPostsFriends();
-		// -->
+		
+		<!-- $post = new Post($con, $userLoggedIn);
+		$post->loadPostsFriends(); -->
+		
 		<div class="posts_area"></div>
 
 		<img id="loading" src="assets/images/icons/loading.gif">
