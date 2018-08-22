@@ -46,7 +46,7 @@ class User
     {
         $usernameComma = "," . $username_to_check . ",";
 
-        if((strstr($this->user['friend_array'], $usernameComma) || $username_to_check == $this->user['username']))
+        if((strstr($this->user['friend_arrary'], $usernameComma) || $username_to_check == $this->user['username']))
         {
             return true;
         }
