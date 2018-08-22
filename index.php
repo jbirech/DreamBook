@@ -53,7 +53,7 @@ if (isset($_POST['post']))
 		// -->
 		<div class="posts_area"></div>
 
-		<img id="#loading" src="assets/images/icons/loading.gif">
+		<img id="loading" src="assets/images/icons/loading.gif">
 	
 
 </div>
@@ -81,6 +81,7 @@ if (isset($_POST['post']))
 
 		$(window).scroll(function()
 		{
+			//scrolling to load the posts from the other pages/ old posts
 			var height = $('.post_area').height();//div containing photos
 			var scroll_top = $(this).scrollTop();
 			var page = $('.post_area').find('.nextPage').val();
@@ -89,6 +90,7 @@ if (isset($_POST['post']))
 			if ((doucument.body.scrollHeight == doucument.body.scrollTop + window.innerHeight) && noMorePosts == 'false')
 			{
 				$('#loading').show();
+				//alert("Hello");
 
 				var ajaxReq = $.ajax(
 				{
