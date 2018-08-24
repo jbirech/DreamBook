@@ -105,20 +105,20 @@ class Post {
 					$profile_pic = $user_row['profile_pic'];
 
 
-					?>
-					<script>
-						function toggle<?php echo $id; ?>()
-						{
-							var element = document.getElementById("toggleComment<?php echo $id; ?>");
+					
+					//<script>
+						// function toggle<?php echo $id; ?>()
+						// {
+						// 	var element = document.getElementById("toggleComment<?php echo $id; ?>");
 
-							if(element.style.display == "block")
-								element.style.display = "none";
-							else
-								element.style.display = "block";
-						}
+						// 	if(element.style.display == "block")
+						// 		element.style.display = "none";
+						// 	else
+						// 		element.style.display = "block";
+						// }
 
-					</script>
-					<?
+					
+					
 
 
 					//Timeframe
