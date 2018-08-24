@@ -101,7 +101,21 @@ class Post {
 					$user_row = mysqli_fetch_array($user_details_query);
 					$first_name = $user_row['first_name'];
 					$last_name = $user_row['last_name'];
-					$profile_pic = $user_row['profile_pic'];
+                    $profile_pic = $user_row['profile_pic'];
+                    
+                    ?>
+                    <script>
+                        function toggle<?php echo $id; ?>()
+                        {
+                            var element = document.getElementById("toggleComment<?php echo $id; ?>");
+
+                            if (element.sytle.display == "block")
+                                element.style.display = "none";
+                            else
+                                element.style.display = "block";
+                        }
+                    </script>
+                    <?
 
 
 					//Timeframe
@@ -168,7 +182,7 @@ class Post {
 						}
 					}
 
-					$str .= "<div class='status_post'>
+					$str .= "<div class='status_post' onClick='javascript:toggle$id()'>
 								<div class='post_profile_pic'>
 									<img src='$profile_pic' width='50'>
 								</div>
@@ -181,7 +195,10 @@ class Post {
 									<br>
 								</div>
 
-							</div>
+                            </div>
+                            <div class='post_comments' id='toggleComments$id' style='display:none;'>
+                                <iframe src='comment_frame.php?post_id; id='comment_iframe'></iframe>
+                            </div>
 							<hr>";
 				}
 
