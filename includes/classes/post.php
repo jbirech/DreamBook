@@ -115,7 +115,7 @@ class Post {
                                 element.style.display = "block";
                         }
                     </script>
-                    <?
+                    <?php
 
 
 					//Timeframe
