@@ -6,6 +6,14 @@
 </head>
 <body>
     
+    <style type="text/css">
+    *{
+        font_size: 12px;
+        font_family: Arial, Helvetica, Sans-serif;
+    }
+    
+    </style>
+
     <?php
     require 'config/config.php';
     include("includes/classes/User.php");
@@ -147,13 +155,17 @@
                 ?>
                  <div class="comment_section">
                     <a href="<?php echo $posted_by?>" target="_parent"><img src="<?php echo $user_obj->getProfilepic();?>"title="<?php echo $posted_by;?>" style="float:left;" height="30"></a>
-                    <a href="<?php echo $posted_by?>" target="_parent"> <b><?php echo $user_obj->getFirstAndLastName(); ?></b></a>
+                    <a href="<?php echo $posted_by?>" target="_parent"> <b> <?php echo $user_obj->getFirstAndLastName(); ?></b></a>
                     &nbsp;&nbsp;&nbsp;&nbsp; <?php echo $time_message . "<br>" . $comment_body; ?>
                     <hr>
                 </div>
                 <?php
 
             }
+        }
+        else
+        {
+            echo "<center><br><br> No comments to show!</center>";
         }
         ?>
     
