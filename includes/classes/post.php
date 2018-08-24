@@ -206,7 +206,7 @@ class Post {
 								</div>
 
 								<div class='newsfeedPostOptions'>
-								Comments($comments_check_num)$nbsp;$nbsp;$nbsp;
+								Comments($comments_check_num)&nbsp;&nbsp;&nbsp;
 								</div>
 
                             </div>
