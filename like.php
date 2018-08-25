@@ -33,10 +33,30 @@
 
 	$user_details_query = mysqli_query($con, "SELECT * FROM users WHERE username='$user_liked'");
 	$row = mysqli_fetch_array($user_details_query);
+	$total_user_likes = $row['num_likes'];
 
 	//like button
 
+	if(isset($_POST['like_button']))
+	{
+		$total_likes++;
+		$query = mysqli_query($con, "UPDATE posts SET likes WHERE username='$userLoggedIn' AND id='$post_id'");
+		$total_user_likes++;
+		$user_likes = mysqli_query($con, "UPDATE users SET num_likes='$total_user_likes' WHERE username='$user_liked'");
+		$insert_user = mysqli_query($con, "INSERT INTO likes VALUES('', '$userLoggedIn', '$post_id')");
+
+		//Insert notification
+	}
+
 	//unlike button
+	if(isset($_POST['unlike_button']))
+	{
+		$total_likes--;
+		$query = mysqli_query($con, "UPDATE posts SET likes WHERE username='$userLoggedIn' AND id='$post_id'");
+		$total_user_likes--;
+		$user_likes = mysqli_query($con, "UPDATE users SET num_likes='$total_user_likes' WHERE username='$user_liked'");
+		$insert_user = mysqli_query($con, "DELETE FROM likes WHERE username='$userLoggedIn' AND post_id='$post_id'");
+	}
 
 	//check for previous likes
 	$check_query = mysqli_query($con, "SELECT * FROM likes WHERE username='$userLoggedIn' AND post_id='$post_id'");
