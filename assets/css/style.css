@@ -229,3 +229,30 @@ textarea:focus
     text-decoration: none;
     color: white;
 }
+
+.newsfeedpostOptions iframe
+{
+    border: 0px;
+    height: 17px;
+    width: 120px;
+}
+
+
+.comment_like
+{
+    background-color:transparent;
+    border: none;
+    font-size: 14px;
+    color: green;
+    padding: 0;
+    height: auto;
+    width: auto;
+    margin: 0;
+}
+
+.like_value
+{
+    display: inline;
+    font-size: 14px;
+
+}

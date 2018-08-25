@@ -5,6 +5,22 @@
 </head>
 <body>
 
+	<style type="text/css">
+	*{
+		font-family: Arial, Helvetica, Sans-serif;
+	}
+	body{
+		bacground-color: #fff;
+	}
+	form
+	{
+		position: absolute;
+		top: 0;
+	}
+
+
+	</style>
+
 	<?php
     require 'config/config.php';
     include("includes/classes/User.php");
