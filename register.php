@@ -124,7 +124,7 @@ require 'includes/form_handlers/login_handler.php';
 					<?php if(in_array("<span style='color: #14C800;'>You're all set! Goahead and login!</span><br>", $error_array)) echo "<span style='color: #14C800;'>You're all set! Go ahead and login!</span><br>"; ?>
 					<a href="#" id="signin" class="signin">Already have an account? signin here!</a>
 				</form>
-			</div>
+			</div>  
 		</div>
 
 	</div>
