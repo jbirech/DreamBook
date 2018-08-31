@@ -24,11 +24,14 @@ else
     <script src="assets/js/bootstrap.js"></script>
     <script src="assets/js/bootbox.min.js"></script>
     <script src="assets/js/Dreambook.js"></script>
+    <script src="assets/js/jquery.jcrop.js"></script>
+    <script src="assets/js/jcrop_bits.js"></script>
    
     <!-- Css -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.Jcrop.css">
 
 </head>
 <body>
