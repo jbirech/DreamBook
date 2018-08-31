@@ -61,7 +61,7 @@ nav
 nav a
 {
     position: relative;
-    color: #ffff;
+    color: rgb(11, 14, 235);
     text-decoration: none;
     font-size: 17px;
 }
@@ -227,7 +227,8 @@ textarea:focus
 {
     padding: 0px;
     text-decoration: none;
-    color: white;
+    color: #20AAE5;
+    border: none;
 }
 
 .newsfeedpostOptions iframe
@@ -237,13 +238,12 @@ textarea:focus
     width: 120px;
 }
 
-
 .comment_like
 {
-    background-color:transparent;
+    background-color: transparent;
     border: none;
     font-size: 14px;
-    color: green;
+    color: #3498db;
     padding: 0;
     height: auto;
     width: auto;
@@ -255,4 +255,127 @@ textarea:focus
     display: inline;
     font-size: 14px;
 
+}
+
+.profile_left
+{
+    top: -10px;
+    width: 17%;
+    max-width: 240px;
+    min-width: 130px;
+    height: 100%;
+    float: left;
+    position: relative;
+    background-color: #37B0E9;
+    border-right: 10px solid #83D6FE;
+    color: #CBEAf8;
+    margin-right: 20px;
+}
+
+.profile_left img
+{
+    min-width: 80px;
+    width: 55%;
+    margin: 20px;
+    border: 5px solid #83D6FE;
+    border-radius: 100px;
+}
+
+.profile_info
+{
+    display: list-item;
+    background-color: #2980b9;
+    width: 100%;
+    padding: 10px 0 10px 0;
+}
+
+.profile_info p
+{
+    margin: 0 0 0 20px;
+    word-wrap: break-word;
+}
+
+.danger
+{
+    background-color: #e74c3c;
+}
+
+.warning
+{
+    background-color: #f0ad4e;
+}
+.default
+{
+    background-color: #bdc3c7;
+}
+.success
+{
+    background-color: #2ecc71;
+}
+
+.info
+{
+    background-color: #3498db;
+}
+
+.deep_blue
+{
+    background-color: #0043f0;
+}
+
+.profile_left input[type="submit"]
+{
+    width: 90%;
+    height: 30px;
+    border-radius: 5px;
+    margin: 7px 0 0 7px;
+    border: none;
+    color: #fff;
+}
+
+#accept_button
+{
+    width: 20%;
+    height: 28px;
+    border-radius: 5px;
+    margin: 5px;
+    border: none;
+    color: white;
+    background-color: green;
+}
+
+#ignore_button
+{
+    width: 20%;
+    height: 28px;
+    border-radius: 5px;
+    margin: 5px;
+    border: none;
+    color: white;
+    background-color: red;
+}
+
+
+.delete_button
+{
+    height: 22px;
+    width: 22px;
+    padding: 0;
+    float: right;
+    border-radius: 4px;
+    right: -15px;
+    position: relative;
+}
+
+.profile_main_column
+{
+    min-width: 675px;
+    float: left;
+    width: 70px;
+    z-index: -1;
+}
+
+.profile_info button
+{
+    margin: 10 0 0 7px;
 }

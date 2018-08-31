@@ -10,7 +10,7 @@
 		font-family: Arial, Helvetica, Sans-serif;
 	}
 	body{
-		bacground-color: #fff;
+		bacground-color: white;
 	}
 	form
 	{

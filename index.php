@@ -52,7 +52,6 @@ if (isset($_POST['post']))
 		$post->loadPostsFriends(); -->
 		
 		<div class="posts_area"></div>
-
 		<img id="loading" src="assets/images/icons/loading.gif">
 	
 

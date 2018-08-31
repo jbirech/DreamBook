@@ -1,5 +1,7 @@
 <?php  
 require 'config/config.php';
+// include("includes/classes/User.php");
+// include("includes/classes/post.php");
 
 if (isset($_SESSION['username']))
 {
@@ -20,6 +22,8 @@ else
     <!-- Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/bootbox.min.js"></script>
+    <script src="assets/js/Dreambook.js"></script>
    
     <!-- Css -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
@@ -53,7 +57,7 @@ else
                 </i>
             </a>
 
-            <a href="#">
+            <a href="requests.php">
                 <i class="fa fa-users fa-lg">
                 </i>
             </a>
@@ -69,5 +73,5 @@ else
         </nav>
 
     </div>
-
+ 
     <div class="wrapper">
