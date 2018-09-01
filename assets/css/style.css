@@ -379,3 +379,60 @@ textarea:focus
 {
     margin: 10 0 0 7px;
 }
+
+#message_textarea
+{
+    width: 80%;
+    margin-right: 8px;
+    border-radius: 5px;
+    border: 1px solid #d3d3d3;
+    font-size: 12px;
+}
+
+#message_submit
+{
+    height: 41px;
+    width: 120px;
+    margin: 0;
+    position: absolute;
+    border: none;
+    background-color: #20AAE5;
+    color: #156588;
+    border-radius: 5px;
+    font-family: 'SourceCodePro-Bold',sans-serif;
+    text-shadow: #73B6e2 0.5px 0.5px 0px;
+}
+
+.message
+{
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 5px 10px;
+    display: inline-block;
+    color: white;
+}
+
+.message#blue
+{
+    background-color: #1086ba;
+    border-color: #3498db;
+    float: right;
+    margin-bottom: 5px;
+}
+
+.message#green
+{
+    background-color: green;
+    border-color: lightgreen;
+    float: left;
+    margin-bottom: 5px;
+}
+
+.loadedmessages
+{
+    height: 65%;
+    min-height: 300px;
+    max-height: 400px;
+    overflow: scroll;
+    margin-bottom: 10pxl
+}
