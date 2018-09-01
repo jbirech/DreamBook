@@ -436,3 +436,31 @@ textarea:focus
     overflow: scroll;
     margin-bottom: 10pxl
 }
+
+.loaded_conversations
+{
+    max-height: 216px;
+    overflow: scroll;
+}
+
+.user_found_messages
+{
+    border-bottom: 1px solid #d3d3d3;
+    padding: 8px 8px 10px 8px;
+}
+
+.user_found_messages:hover
+{
+    background-color: #D3D3D3;
+}
+
+.user_found_messages img
+{
+    height: 35px;
+    float: left;
+}
+
+#grey
+{
+    color: #8C8C8C;
+}

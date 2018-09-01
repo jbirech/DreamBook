@@ -141,7 +141,7 @@ class Message {
         $return_string = "";
         $convos = array();
 
-        $query = mysqli_query($this->con, "SELECT user_to, user_from FROM  messages WHERE user_to='$userLoggedIn' OR user_from='$userLoggedIn'");
+        $query = mysqli_query($this->con, "SELECT user_to, user_from FROM  messages WHERE user_to='$userLoggedIn' OR user_from='$userLoggedIn' ORDER BY id DESC");
 
 
         while($row = mysqli_fetch_array($query))
@@ -167,7 +167,7 @@ class Message {
                                 <img src='" . $user_found_obj->getProfilePic() . "' style='border-radius: 5px; margin-right: 5px;'>
                                 " . $user_found_obj->getFirstAndLastName() . "
                                 <span class='timestamp_smaller' id='grey'>" . $latest_message_details[2] .  "</span>
-                                <p id='grey' style='margin: 0;'>" . $latest_message_details[0] .$split . "</p>
+                                <p id='grey' style='margin: 0;'>" . $latest_message_details[0] . $split . "</p>
                                 </div>
                                 </a>";
         }
