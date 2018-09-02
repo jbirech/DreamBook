@@ -2,6 +2,7 @@
 include("includes/header.php");
 include("includes/classes/User.php");
 include("includes/classes/post.php");
+include("includes/classes/Message.php");
 
 $message_obj = new Message($con, $userLoggedIn);
 
@@ -38,7 +39,7 @@ if(isset($_POST['post_message']))
 	{
 		$body = mysqli_real_escape_string($con, $_POST['message_body']);
 		$date = date("Y-m-d H:i:s");
-		$mesaage_obj->sendMessage($username, $body, $date);
+		$message_obj->sendMessage($username, $body, $date);
 	}
 
 	$link = "#profileTabs a[href='#messages_div']";
