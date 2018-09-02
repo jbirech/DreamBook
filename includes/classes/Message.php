@@ -161,7 +161,7 @@ class Message {
 
             $dots = (strlen($latest_message_details[1]) >= 12) ? "..." : "";
             $split = str_split($latest_message_details[1], 12);
-            $split = split[0] . $dots;
+            $split = $split[0] . $dots;
 
             $return_string .= "<a href='messages.php?u=$username'> <div class='user_found_messages'>
                                 <img src='" . $user_found_obj->getProfilePic() . "' style='border-radius: 5px; margin-right: 5px;'>
