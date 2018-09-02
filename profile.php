@@ -3,6 +3,8 @@ include("includes/header.php");
 include("includes/classes/User.php");
 include("includes/classes/post.php");
 
+$message_obj = new Message($con, $userLoggedIn);
+
 if(isset($_GET['profile_username']))
 {
 	$username = $_GET['profile_username'];
@@ -28,6 +30,23 @@ if(isset($_POST['add_friend']))
 if(isset($_POST['respond_request']))
 {
 	header("Location: requests.php");
+}
+
+if(isset($_POST['post_message']))
+{
+	if(isset($_POST['message_body']))
+	{
+		$body = mysqli_real_escape_string($con, $_POST['message_body']);
+		$date = date("Y-m-d H:i:s");
+		$mesaage_obj->sendMessage($username, $body, $date);
+	}
+
+	$link = "#profileTabs a[href='#messages_div']";
+	echo "<script>
+		$(function(){
+			$('" . $link ."').tab('show');
+		});
+	</script>";
 }
 
 ?>
@@ -99,8 +118,47 @@ if(isset($_POST['respond_request']))
 	</div>
 
 	<div class="profile_main_column column">
-	<div class="posts_area"></div>
-	<img id="loading" src="assets/images/icons/loading.gif">
+	
+		<ul class="nav nav-tabs" role="tablist" id="profileTabs">
+			<li role="presentation" class="active"><a href="#newsfeed_div" aria-controls="newsfeed_div" role="tab" data-toggle="tab"><newsfeed</a></li>
+			<li role="presentation"><a href="#about_div" aria-controls="about_div" role="tab" data-toggle="tab"><About</a></li>
+			<li role="presentation"><a href="#messages_div" aria-controls="messages_div" role="tab" data-toggle="tab"><Messages</a></li>
+		</ul>
+
+		<div class="tab-content">
+			<div class="tabpanel" class="tab-pane fade in active" id="newsfeed_div">
+				<div class="posts_area"></div>
+				<img id="loading" src="assets/images/icons/loading.gif">
+			</div>
+
+			<div class="tabpanel" class="tab-pane fade" id="about_div">
+				
+			</div>
+
+			<div class="tabpanel" class="tab-pane fade" id="messages_div">
+				<?php
+					echo "<h4> You and <a href='". $username ."'>" . $profile_user_obj->getFirstAndLastName() . "</a></h4><hr><br>";
+					echo "<div class='loaded_messages' id='scroll_messages'>";
+						echo $message_obj->getMessages($username);
+					echo "</div>";
+				
+				?>
+
+				<div class="message_post">
+					<form action="" method="POST">
+							<textarea name='message_body' id='message_textarea' placeholder='Write your message..'></textarea>
+							<input type='submit' name='post_message' class='info' id='message_submit' value='Send'>
+					</form>
+
+				</div>
+				<script>
+					var div = document.getElementById("scroll_messages");
+					div.scrollTop = div.scrollHeight;
+				</script>
+			</div>
+
+
+		</div>
 		
 	</div>
 

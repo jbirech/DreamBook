@@ -17,7 +17,7 @@ else if(count($names) == 2)
 }
 else 
 {
-    $usersReturned = mysqli_query($con, "SELECT * FROM users WHERE (first_name LIKE '%$names[0]%' AND last_name LIKE '%$names[0]%') AND user_closed='no' LIMIT 8");
+    $usersReturned = mysqli_query($con, "SELECT * FROM users WHERE (first_name LIKE '%$names[0]%' OR last_name LIKE '%$names[0]%') AND user_closed='no' LIMIT 8");
 }
 
 if($query != "")
@@ -45,11 +45,11 @@ if($query != "")
 
                         <div class='liveSearchText'>
                             ".$row['first_name'] ." " .$row['last_name']."
-                            <p>". $row['username'] ."</p>
-                            <p id='grey>'".$mutual_friends . "</p>
+                            <p style='margin: 0;'>". $row['username'] ."</p>
+                            <p id='grey'>".$mutual_friends . "</p>
                         </div>
                     </a>
-                </div>
+                </div>";
         }
     }
 }
