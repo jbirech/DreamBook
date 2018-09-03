@@ -86,7 +86,7 @@ if (isset($_POST['post']))
 			var page = $('.post_area').find('.nextPage').val();
 			var noMorePosts = $('.posts_area').find('.noMorePosts').val();
 
-			if ((doucument.body.scrollHeight == doucument.body.scrollTop + window.innerHeight) && noMorePosts == 'false')
+			if ((document.body.scrollHeight == document.body.scrollTop + window.innerHeight) && noMorePosts == 'false')
 			{
 				$('#loading').show();
 				//alert("Hello");
