@@ -51,6 +51,8 @@ if (isset($_POST['post']))
 		<!-- $post = new Post($con, $userLoggedIn);
 		$post->loadPostsFriends(); -->
 		
+
+		<!-- //a gif to show while loading the next image -->
 		<div class="posts_area"></div>
 		<img id="loading" src="assets/images/icons/loading.gif">
 	
