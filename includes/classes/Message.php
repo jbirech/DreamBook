@@ -185,7 +185,7 @@ class Message {
         if($page == 1)
             $start = 0;
         else
-            $start = ($page -1) * limit;
+            $start = ($page -1) * $limit;
 
         $set_viewd_query = mysqli_query($this->con, "UPDATE messages SET viewed='yes' WHERE user_to='$userLoggedIn'");
 
@@ -238,7 +238,7 @@ class Message {
 
         //if post  were loaded
         if($count > $limit)
-            $return_string .= "<input type='hidden' class='nextPageDropdownData' value'" .($page + 1). "'input type='hidden' class='noMoreDropdownDat' value='false'>";
+            $return_string .= "<input type='hidden' class='nextPageDropdownData' value'" .($page + 1). "'input type='hidden' class='noMoreDropdownData' value='false'>";
         else
         $return_string .= "<input type='hidden' class='noMoreDropdowndata' value='true'> <p style='text-align: center;'> No more messages to load!</p>";
 
