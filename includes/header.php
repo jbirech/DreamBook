@@ -6,7 +6,7 @@ require 'config/config.php';
 //include("includes/classes/Notifications.php");
 
 
-//  include_once("all_includes.php");
+//require_once("all_includes.php");
 
 if (isset($_SESSION['username']))
 {
