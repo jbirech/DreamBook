@@ -1,5 +1,5 @@
 <?php 
-class User
+namespace User
 {
     private $user;
     private $con;

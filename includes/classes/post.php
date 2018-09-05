@@ -1,5 +1,5 @@
 <?php
-class Post {
+namespace Post {
 	private $user_obj;
 	private $con;
 

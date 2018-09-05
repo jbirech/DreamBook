@@ -1,5 +1,5 @@
 <?php
-class Notification {
+namespace Notification {
 	private $user_obj;
 	private $con;
 

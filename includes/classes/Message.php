@@ -1,5 +1,5 @@
 <?php
-class Message {
+namespace Message {
 	private $user_obj;
 	private $con;
 
