@@ -1,6 +1,7 @@
 <?php
-namespace messageone; 
-    class Message {
+    namespace messageone;
+    class Message 
+    {
         private $user_obj;
         private $con;
 
