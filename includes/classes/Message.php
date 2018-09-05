@@ -1,5 +1,5 @@
 <?php
-    namespace messageone;
+namespace messageone;
     class Message 
     {
         private $user_obj;
