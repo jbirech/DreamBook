@@ -3,6 +3,7 @@ require 'config/config.php';
 // include("includes/classes/User.php");
 // include("includes/classes/post.php");
 // include("includes/classes/Message.php");
+//include("includes/classes/Notifications.php");
 
 
 //  include_once("all_includes.php");
