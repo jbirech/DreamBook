@@ -4,7 +4,8 @@ require 'config/config.php';
 // include("includes/classes/post.php");
 // include("includes/classes/Message.php");
 
-//  include("all_includes.php");
+
+//  include_once("all_includes.php");
 
 if (isset($_SESSION['username']))
 {
@@ -46,8 +47,8 @@ else
 
         <nav>
             <?php
-                $messages = new Message($con, $userLoggedIn);
-                $num_messages = $messages->getUnreadNumber();
+               // $messages = new Message($con, $userLoggedIn);
+               // $num_messages = $messages->getUnreadNumber();
             ?>
 
 
@@ -62,8 +63,8 @@ else
             <a href="javascript:void(0);" onclick="getDropdownData('<?php echo $userLoggedIn; ?>', 'message')">
                 <i class="fa fa-envelope fa-lg"></i>
                 <?php
-                if ($num_messages > 0)
-                    echo ' <span class="notifications_badge" id="unread_message">'. $num_messages . '</span>'
+                //if ($num_messages > 0)
+                  //  echo ' <span class="notifications_badge" id="unread_message">'. $num_messages . '</span>'
                 ?>
             </a>
             
