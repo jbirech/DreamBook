@@ -46,6 +46,25 @@ else
             <a href="index.php">Dreambook</a>
         </div>
 
+        <div clas="search">
+
+            <form action="search.php" method="GET" name="search_form">
+                <input type="text" onKeyup="getLiveSearchUser(this.value, '<?php echo $userLoggedIn; ?>')" name="q" placeholder="search..." autocomplete="off" id="search_text_input">
+
+                <div class="button_holder">
+                    <img src="assests/images/icons/search.jpg" >
+                </div>
+            </form>
+
+            <div class="search_results">
+            </div>
+
+            <div class="search_results_footer_empty">
+            </div>
+
+
+        </div>
+
         <nav>
             <?php
             //unread messages
