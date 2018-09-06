@@ -1,9 +1,9 @@
 <?php  
 require 'config/config.php';
-// include_once("includes/classes/User.php");
-// include_once("includes/classes/post.php");
-// include_once("includes/classes/Message.php");
-// //include_once("includes/classes/Notifications.php");
+include_once("includes/classes/User.php");
+include_once("includes/classes/post.php");
+include_once("includes/classes/Message.php");
+include_once("includes/classes/Notifications.php");
 
 
 //require_once("all_includes.php");
@@ -48,7 +48,7 @@ else
 
         <nav>
             <?php
-               $messages = new \Messageone\Message($con, $userLoggedIn);
+               $messages = new \Messageone/Message($con, $userLoggedIn);
                $num_messages = $messages->getUnreadNumber();
             ?>
 
