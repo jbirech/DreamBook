@@ -1,6 +1,7 @@
 <?php 
 namespace one; 
-    class User
+
+class User
     {
         private $user;
         private $con;

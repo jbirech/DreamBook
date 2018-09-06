@@ -1,6 +1,7 @@
 <?php
 namespace notificationone; 
-	class Notification 
+
+class Notification 
 	{
 		private $user_obj;
 		private $con;
