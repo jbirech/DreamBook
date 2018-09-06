@@ -150,7 +150,7 @@
                     }
                 }    
 
-                $user_obj = new User($con, $posted_by);
+                $user_obj = new  \One\User($con, $posted_by);
 
                 ?>
                  <div class="comment_section">

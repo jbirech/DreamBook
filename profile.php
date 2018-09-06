@@ -4,7 +4,7 @@ include_once("includes/header.php");
 // include_once("includes/classes/post.php");
 // include_once("includes/classes/Message.php");
 
-$message_obj = new Messageone/Message($con, $userLoggedIn);
+$message_obj = new \Messageone\Message($con, $userLoggedIn);
 
 if(isset($_GET['profile_username']))
 {
@@ -18,13 +18,13 @@ if(isset($_GET['profile_username']))
 
 if(isset($_POST['remove_friend']))
 {
-	$user = new User($con, $userLoggedIn);
+	$user = new  \One\User($con, $userLoggedIn);
 	$user->removeFriend($username);
 }
 
 if(isset($_POST['add_friend']))
 {
-	$user = new User($con, $userLoggedIn);
+	$user = new  \One\User($con, $userLoggedIn);
 	$user->sendRequest($username);
 }
 
@@ -72,13 +72,13 @@ if(isset($_POST['post_message']))
 
 		<form action="<?php echo $username; ?>" method="POST">
 			<?php
-			$profile_user_obj = new User($con, $username);
+			$profile_user_obj = new  \One\User($con, $username);
 			if($profile_user_obj->isClosed())
 			{
 				header("Location: user_closed.php");
 			}
 
-			$logged_in_user_obj = new User($con, $userLoggedIn);
+			$logged_in_user_obj = new  \One\User($con, $userLoggedIn);
 
 			if($userLoggedIn != $username)
 			{

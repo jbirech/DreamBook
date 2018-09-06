@@ -17,7 +17,7 @@ include_once("includes/header.php");//Header
         while($row = mysqli_fetch_array($query))
         {
             $user_from = $row['user_from'];
-            $user_from_obj = new User($con, $user_from);
+            $user_from_obj = new  \One\User($con, $user_from);
 
             echo $user_from_obj->getFirstAndLastName() . " sent you a friend request!";
 

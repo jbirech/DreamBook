@@ -1,10 +1,10 @@
 <?php
 include_once("includes/header.php");
-// include_once("includes/classes/User.php");
-// include_once("includes/classes/post.php");
-// include_once("includes/classes/Message.php");
+include_once("includes/classes/User.php");
+include_once("includes/classes/post.php");
+include_once("includes/classes/Message.php");
 
-$message_obj = new Message($con, $userLoggedIn);
+$message_obj = new \Messageone\Message($con, $userLoggedIn);
 
 if(isset($_GET['u']))
 {
@@ -18,7 +18,7 @@ else
 }
 
 if($user_to != "new")
-    $user_to_obj = new User($con, $user_to);
+    $user_to_obj = new  \One\User($con, $user_to);
 
 if(isset($_POST['post_message']))
 {

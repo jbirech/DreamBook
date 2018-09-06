@@ -48,7 +48,7 @@ else
 
         <nav>
             <?php
-               $messages = new \Messageone/Message($con, $userLoggedIn);
+               $messages = new \Messageone\Message($con, $userLoggedIn);
                $num_messages = $messages->getUnreadNumber();
             ?>
 

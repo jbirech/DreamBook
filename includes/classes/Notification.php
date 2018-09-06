@@ -1,5 +1,5 @@
 <?php
-// namespace notificationone; 
+namespace Notificationone; 
 
 class Notification 
 	{
@@ -9,7 +9,7 @@ class Notification
 		public function __construct($con, $user)
 		{
 			$this->con = $con;
-			$this->user_obj = new User($con, $user);
+			$this->user_obj = new  \One\User($con, $user);
 		}
 		public function getUnreadNumber()
 		{
