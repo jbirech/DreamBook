@@ -24,7 +24,7 @@ if($query != "")
 {
     while($row = mysqli_fetch_array($usersReturned))
     {
-        $user = new user($con , $userLoggedIn);
+        $user = new \One\User($con , $userLoggedIn);
 
         if($row['username'] != $userLoggedIn)
         {
