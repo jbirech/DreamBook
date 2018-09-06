@@ -3,7 +3,7 @@ require 'config/config.php';
 include_once("includes/classes/User.php");
 include_once("includes/classes/post.php");
 include_once("includes/classes/Message.php");
-//include_once("includes/classes/Notifications.php");
+include_once("includes/classes/Notifications.php");
 
 
 //require_once("all_includes.php");
@@ -48,8 +48,16 @@ else
 
         <nav>
             <?php
+            //unread messages
                $messages = new \Messageone\Message($con, $userLoggedIn);
                $num_messages = $messages->getUnreadNumber();
+
+               //unread notifications
+               $notifications = new \Notificationone\Notifications($con, $userLoggedIn);
+               $num_notifications= $messages->getUnreadNumber();
+
+               $user_obj = new \One\User($con, $userLoggedIn);
+               $num_requests = $user_obj->getNumberOfFriendRequests();
             ?>
 
 
@@ -69,14 +77,26 @@ else
                 ?>
             </a>
             
-            <a href="#">
+            <a href="javascript:void(0);" onclick="getDropdownData('<?php echo $userLoggedIn; ?>', 'notification')">
                 <i class="fa fa-bell-o fa-lg">       
                 </i>
+                <?php
+                
+                if ($num_notifications > 0)
+                   echo ' <span class="notifications_badge" id="unread_message">'. $num_notifications. '</span>'
+                
+                ?>
             </a>
 
             <a href="requests.php">
                 <i class="fa fa-users fa-lg">
                 </i>
+                <?php
+                
+                if ($num_requests > 0)
+                   echo ' <span class="notifications_badge" id="unread_requests">'. $num_requests. '</span>'
+                
+                ?>
             </a>
 
             <a href="#">

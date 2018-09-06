@@ -537,3 +537,23 @@ textarea:focus
     left: 8px;
     top: -5px;
 }
+
+.resultDisplayNotification
+{
+    height: auto;
+    color: #1485BD;
+    padding: 7px;
+}
+.resultDisplayNotification img
+{
+    height: 40px;
+    border-radius: 5px;
+    margin: 1px 12px 0px 2px;
+    float: left;
+}
+
+.timestamp_smaller
+{
+    font-size: 85%;
+    margin: 0;
+}

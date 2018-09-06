@@ -19,7 +19,7 @@ include_once("includes/classes/Message.php");
 
 if (isset($_POST['post']))
 {
-	$post = new Post($con, $userLoggedIn);
+	$post = new \Postone\Post($con, $userLoggedIn);
 	$post->submitPost($_POST['post_text'], 'none');
 }
 ?>
@@ -49,7 +49,7 @@ if (isset($_POST['post']))
 
 		
 		
-		<!-- $post = new Post($con, $userLoggedIn);
+		<!-- $post = new \Postone\Post($con, $userLoggedIn);
 		$post->loadPostsFriends(); -->
 		
 
