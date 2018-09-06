@@ -116,8 +116,8 @@
 
                 //Timeframe
                 $date_time_now = date("Y-m-d H:i:s");
-                $start_date = new DateTime($date_added); //Time of post
-                $end_date = new DateTime($date_time_now); //Current time
+                $start_date = new  \Post1\DateTime($date_added); //Time of post
+                $end_date = new  \Post1\DateTime($date_time_now); //Current time
                 $interval = $start_date->diff($end_date); //Difference between dates 
                 if($interval->y >= 1) {
                     if($interval == 1)

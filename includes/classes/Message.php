@@ -70,8 +70,8 @@ class Message
             $sent_by = ($row['user_to'] == $userLoggedIn) ? "They said: " : "You said: ";
 
             $date_time_now = date("Y-m-d H:i:s");
-            $start_date = new DateTime($row['date']); //Time of post
-            $end_date = new DateTime($date_time_now); //Current time
+            $start_date = new  \Post1\DateTime($row['date']); //Time of post
+            $end_date = new  \Post1\DateTime($date_time_now); //Current time
             $interval = $start_date->diff($end_date); //Difference between dates 
             if($interval->y >= 1) {
                 if($interval == 1)

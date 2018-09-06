@@ -3,7 +3,7 @@ require 'config/config.php';
 include_once("includes/classes/User.php");
 include_once("includes/classes/post.php");
 include_once("includes/classes/Message.php");
-include_once("includes/classes/Notifications.php");
+include_once("includes/classes/Notification.php");
 
 
 //require_once("all_includes.php");
@@ -53,7 +53,7 @@ else
                $num_messages = $messages->getUnreadNumber();
 
                //unread notifications
-               $notifications = new \Notificationone\Notifications($con, $userLoggedIn);
+               $notifications = new \Note\Notification($con, $userLoggedIn);
                $num_notifications= $messages->getUnreadNumber();
 
                $user_obj = new \One\User($con, $userLoggedIn);
