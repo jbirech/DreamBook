@@ -1,4 +1,4 @@
-<?php include("includes/header.php");
+<?php include_once("includes/header.php");
 
 $profile_id = $user['username'];
 $imgSrc = "";

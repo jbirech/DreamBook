@@ -1,5 +1,5 @@
 <?php
-namespace messageone;
+namespace Messageone;
 
 class Message 
     {
@@ -8,7 +8,7 @@ class Message
 
         public function __construct($con, $user){
             $this->con = $con;
-            $this->user_obj = new User($con, $user);
+            $this->user_obj = new \One\User($con, $user);
         }
         
         public function getMostRecentUser()
@@ -159,7 +159,7 @@ class Message
 
             foreach($convos as $username)
             {
-                $user_found_obj = new User($this->con, $username);
+                $user_found_obj = new \One\User($this->con, $username);
                 $latest_message_details = $this->getLatestMessage($userLoggedIn, $username);
 
                 $dots = (strlen($latest_message_details[1]) >= 12) ? "..." : "";
@@ -222,7 +222,7 @@ class Message
                 $row = mysqli_fetch_array($is_unread_query);
                 $style = ($row['opened'] == 'no') ? "background-color: #DDEDFF;": "";
 
-                $user_found_obj = new User($this->con, $username);
+                $user_found_obj = new \One\User($this->con, $username);
                 $latest_message_details = $this->getLatestMessage($userLoggedIn, $username);
 
                 $dots = (strlen($latest_message_details[1]) >= 12) ? "..." : "";

@@ -1,12 +1,12 @@
 <?php  
 require 'config/config.php';
-include("includes/classes/User.php");
-include("includes/classes/post.php");
-include("includes/classes/Message.php");
-//include("includes/classes/Notifications.php");
+// include_once("includes/classes/User.php");
+// include_once("includes/classes/post.php");
+// include_once("includes/classes/Message.php");
+// //include_once("includes/classes/Notifications.php");
 
 
-//require_once("all_includes.php");
+require_once("all_includes.php");
 
 if (isset($_SESSION['username']))
 {
@@ -48,7 +48,7 @@ else
 
         <nav>
             <?php
-               $messages = new Message($con, $userLoggedIn);
+               $messages = new \Messageone\Message($con, $userLoggedIn);
                $num_messages = $messages->getUnreadNumber();
             ?>
 

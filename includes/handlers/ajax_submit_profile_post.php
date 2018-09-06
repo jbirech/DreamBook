@@ -1,7 +1,7 @@
 <?php
 require '../../config/config.php';
-include("../classes/User.php");
-include("../classes/post.php");
+include_once("../classes/User.php");
+include_once("../classes/post.php");
 
 if(isset($_POST['post_body']))
 {

@@ -1,7 +1,7 @@
 <?php
-include("../../config/config.php");
-include("../classes/User.php");
-include("../classes/Message.php");
+include_once("../../config/config.php");
+include_once("../classes/User.php");
+include_once("../classes/Message.php");
 
 $limit = 7;//number of messages to load
 

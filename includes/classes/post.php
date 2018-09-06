@@ -1,5 +1,5 @@
 <?php
-namespace postone;
+// namespace Postone;
 
 class Post {
 	private $user_obj;
@@ -7,7 +7,7 @@ class Post {
 
 	public function __construct($con, $user){
 		$this->con = $con;
-		$this->user_obj = new User($con, $user);
+		$this->user_obj = new \One\User($con, $user);
 	}
 
 	public function submitPost($body, $user_to) {
@@ -74,18 +74,18 @@ class Post {
 					$user_to = "";
 				}
 				else {
-					$user_to_obj = new User($this->con, $row['user_to']);
+					$user_to_obj = new \One\User($this->con, $row['user_to']);
 					$user_to_name = $user_to_obj->getFirstAndLastName();
 					$user_to = "to <a href='" . $row['user_to'] ."'>" . $user_to_name . "</a>";
 				}
 
 				//Check if user who posted, has their account closed
-				$added_by_obj = new User($this->con, $added_by);
+				$added_by_obj = new \One\User($this->con, $added_by);
 				if($added_by_obj->isClosed()) {
 					continue;
 				}
 
-				$user_logged_obj = new User($this->con, $userLoggedIn);
+				$user_logged_obj = new \One\User($this->con, $userLoggedIn);
 				if($user_logged_obj->isFriend($added_by)){
 
 					if($num_iterations++ < $start)
@@ -292,18 +292,18 @@ class Post {
 				// 	$user_to = "";
 				// }
 				// else {
-				// 	$user_to_obj = new User($con, $row['user_to']);
+				// 	$user_to_obj = new \One\User($con, $row['user_to']);
 				// 	$user_to_name = $user_to_obj->getFirstAndLastName();
 				// 	$user_to = "to <a href='" . $row['user_to'] ."'>" . $user_to_name . "</a>";
 				// }
 
 				//Check if user who posted, has their account closed
-				// $added_by_obj = new User($this->con, $added_by);
+				// $added_by_obj = new \One\User($this->con, $added_by);
 				// if($added_by_obj->isClosed()) {
 				// 	continue;
 				// }
 
-				// $user_logged_obj = new User($this->con, $userLoggedIn);
+				// $user_logged_obj = new \One\User($this->con, $userLoggedIn);
 				// if($user_logged_obj->isFriend($added_by)){
 
 					if($num_iterations++ < $start)

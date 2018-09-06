@@ -1,5 +1,5 @@
 <?php
-include("includes/header.php");
+include_once("includes/header.php");
 ?>
 
 <div class="main_column column" id="main_column">

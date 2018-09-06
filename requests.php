@@ -1,7 +1,7 @@
 <?php
-include("includes/header.php");//Header
-include("includes/classes/User.php");
-include("includes/classes/post.php");
+include_once("includes/header.php");//Header
+include_once("includes/classes/User.php");
+include_once("includes/classes/post.php");
 ?>
 
 <div class="main_column column" id="main_column">

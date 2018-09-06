@@ -1,5 +1,5 @@
 <?php 
-namespace one; 
+namespace One; 
 
 class User
     {

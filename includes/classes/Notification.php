@@ -1,5 +1,5 @@
 <?php
-namespace notificationone; 
+// namespace notificationone; 
 
 class Notification 
 	{
