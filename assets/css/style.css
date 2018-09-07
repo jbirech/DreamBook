@@ -616,3 +616,33 @@ textarea:focus
 {
     color: white;
 }
+
+.search_result
+{
+    padding: 10px;
+    height: 100px;
+}
+
+.searchPageFriendButton
+{
+    float: right;
+}
+
+.searchPageFriendButton input[type="submit"]
+{
+    border: none;
+    padding: 7px 12px;
+    border-radius: 5px;
+    color: white;
+}
+
+.result_profile_pic
+{
+    float: left;
+    margin-right: 10px;
+}
+
+#search_hr 
+{
+    margin-bottom: 0px;
+}

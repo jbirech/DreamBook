@@ -20,7 +20,7 @@ else
 }
 ?>
 
-!DOCTYPE HTML
+<!-- !DOCTYPE HTML -->
 <html>
 <head>
     <title>Dreambook</title>
@@ -53,7 +53,7 @@ else
                 <input type="text" onKeyup="getLiveSearchUsers(this.value, '<?php echo $userLoggedIn; ?>')" name="q" placeholder="search..." autocomplete="off" id="search_text_input">
 
                 <div class="button_holder">
-                    <img src="../assests/images/icons/search.jpg" >
+                    <img src="assets/images/icons/magnifying_glass.png" >
                 </div>
             </form>
 
@@ -98,7 +98,7 @@ else
             </a>
             
             <a href="javascript:void(0);" onclick="getDropdownData('<?php echo $userLoggedIn; ?>', 'notification')">
-                <i class="fa fa-bell-o fa-lg">       
+                <i class="fa fa-bell-slash fa-lg">       
                 </i>
                 <?php
                 

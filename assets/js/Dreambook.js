@@ -8,6 +8,7 @@ $(document).ready(function()
         }
     });
 
+    //when user click on the search icon it should submit the search
     $('.button_holder').on('click', function()
     {
         document.search_form.submit();
@@ -92,6 +93,7 @@ function getDropdownData(user, type)
     }
 }
 
+//show some suggested results when user types in some words in the the search
 function getLiveSearchUsers(value, user)
 {
     $.post("includes/handlers/ajax_search.php", {query:value, userLoggedIn: user}, function(data)
@@ -102,13 +104,13 @@ function getLiveSearchUsers(value, user)
             $(".search_results_footer_empty").toggleClass("search_results_footer_empty");
         }
         $(".search_results").html(data);
-        $(".search_results_footer").html("<a href='search.php?q=" + value + "'See All Results</a>'");
+        $(".search_results_footer").html("<a href='search.php?q=" + value + "'>See All Results</a>");
 
         if(data == "")
         {
             $(".search_results_footer").html("");
             $(".search_results_footer").toggleClass("search_results_footer_empty");
-            $(".search_results_footer").toggleClass("search_results_footer")
+            $(".search_results_footer").toggleClass("search_results_footer");
         }
     });
 }

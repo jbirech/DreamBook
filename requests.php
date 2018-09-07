@@ -41,7 +41,7 @@ include_once("includes/header.php");//Header
             }
             ?>
 
-            <form action="request.php" method="POST">
+            <form action="requests.php" method="POST">
                 <input type="submit" name="accept_request<?php echo $user_from; ?>" id="accept_button" value="Accept">
                 <input type="submit" name="Ignore_request<?php echo $user_from; ?>" id="Ignore_button" value="Ignore">
 
