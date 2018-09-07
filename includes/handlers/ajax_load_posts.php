@@ -7,6 +7,6 @@ include_once("../classes/Post.php");
 
 $limit = 10; //Number of posts to be loaded per call
 
-$posts = new \Post1\Post($con, $_REQUEST['userLoggedIn']);
+$posts = new Post($con, $_REQUEST['userLoggedIn']);
 $posts->loadPostsFriends($_REQUEST, $limit);
 ?>

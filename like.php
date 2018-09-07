@@ -66,7 +66,7 @@
 		//Insert notification
 		if($user_liked != $userLoggedIn)
 		{
-			$notifications = new \Notifiationone\Notification($con, $userLoggedIn);
+			$notifications = new \Note\Notification($con, $userLoggedIn);
 			$notifications->insertNotifications($post_id, $user_liked, "like");
 		}
 	}

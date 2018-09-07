@@ -1,5 +1,5 @@
 <?php
-namespace Post1;
+// namespace Post1;
 
 class Post {
 	private $user_obj;
@@ -35,7 +35,7 @@ class Post {
 			//Insert notification 
 			if($user_to != 'none')
 			{
-				$notifications = new \Notifiationone\Notification($this->con, $added_by);
+				$notifications = new \Note\Notification($this->con, $added_by);
 				$notifications->insertNotifications($returned_id, $user_to, "profile_post");
 			}
 
@@ -143,8 +143,8 @@ class Post {
 
 					//Timeframe
 					$date_time_now = date("Y-m-d H:i:s");
-					$start_date = new  \Post1\DateTime($date_time); //Time of post
-					$end_date = new  \Post1\DateTime($date_time_now); //Current time
+					$start_date = new DateTime($date_time); //Time of post
+					$end_date = new DateTime($date_time_now); //Current time
 					$interval = $start_date->diff($end_date); //Difference between dates 
 					if($interval->y >= 1) {
 						if($interval == 1)
@@ -361,8 +361,8 @@ class Post {
 
 					//Timeframe
 					$date_time_now = date("Y-m-d H:i:s");
-					$start_date = new  \Post1\DateTime($date_time); //Time of post
-					$end_date = new  \Post1\DateTime($date_time_now); //Current time
+					$start_date = new  \DateTime($date_time); //Time of post
+					$end_date = new  \DateTime($date_time_now); //Current time
 					$interval = $start_date->diff($end_date); //Difference between dates 
 					if($interval->y >= 1) {
 						if($interval == 1)
@@ -560,8 +560,8 @@ class Post {
 
 					//Timeframe
 					$date_time_now = date("Y-m-d H:i:s");
-					$start_date = new  \Post1\DateTime($date_time); //Time of post
-					$end_date = new  \Post1\DateTime($date_time_now); //Current time
+					$start_date = new  \DateTime($date_time); //Time of post
+					$end_date = new  \DateTime($date_time_now); //Current time
 					$interval = $start_date->diff($end_date); //Difference between dates 
 					if($interval->y >= 1) {
 						if($interval == 1)

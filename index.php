@@ -1,15 +1,5 @@
-<!-- # **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    index.php                                          :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: jobirech <marvin@42.fr>                    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2018/08/17 00:09:33 by jobirech          #+#    #+#              #
-#    Updated: 2018/08/17 00:09:42 by jobirech         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** # -->
-<!-- !DOCTYPE HTML -->
+
+<!-- <!DOCTYPE html> -->
 
 <?php
 include_once("includes/header.php");
@@ -20,7 +10,7 @@ include_once("includes/classes/Message.php");
 
 if (isset($_POST['post']))
 {
-	$post = new \Postone\Post($con, $userLoggedIn);
+	$post = new Post($con, $userLoggedIn);
 	$post->submitPost($_POST['post_text'], 'none');
 }
 ?>
@@ -50,7 +40,7 @@ if (isset($_POST['post']))
 
 		
 		
-		<!-- $post = new \Postone\Post($con, $userLoggedIn);
+		<!-- $post = new Post($con, $userLoggedIn);
 		$post->loadPostsFriends(); -->
 		
 

@@ -37,7 +37,7 @@
             var element = document.getElementById("comment_section");
 
             if(element.style.display == "block")
-                element.style.display = "none";
+                element.style.display == "none";
             else
                 element.style.display = "block";
         }
@@ -65,13 +65,13 @@
             
             if($posted_to != $userLoggedIn)
             {
-                $notifications = new \Notifiationone\Notification($con, $userLoggedIn);
+                $notifications = new \Note\Notification($con, $userLoggedIn);
 				$notifications->insertNotifications($post_id, $posted_to, "comment");
             }
             
             if($user_to != 'none' && $user_to != $userLoggedIn)
             {
-                $notifications = new \Notifiationone\Notification($con, $userLoggedIn);
+                $notifications = new \Note\Notification($con, $userLoggedIn);
 				$notifications->insertNotifications($post_id, $user_to, "profile_comment");
             }
 
@@ -81,7 +81,7 @@
             {
                 if($row['posted_by'] != $posted_to && $row['posted_by'] !=  $user_to && $row['posted_by'] != $userLoggedIn && !in_array($row['posted_by'], $notified_users))
                 {
-                    $notifications = new \Notifiationone\Notification($con, $userLoggedIn);
+                    $notifications = new \Note\Notification($con, $userLoggedIn);
                     $notifications->insertNotifications($post_id, $row['posted_by'], "comment_non_owner");
                     
                     array_push($notified_users, $row['posted_by']);
@@ -116,8 +116,8 @@
 
                 //Timeframe
                 $date_time_now = date("Y-m-d H:i:s");
-                $start_date = new  \Post1\DateTime($date_added); //Time of post
-                $end_date = new  \Post1\DateTime($date_time_now); //Current time
+                $start_date = new  \DateTime($date_added); //Time of post
+                $end_date = new  \DateTime($date_time_now); //Current time
                 $interval = $start_date->diff($end_date); //Difference between dates 
                 if($interval->y >= 1) {
                     if($interval == 1)

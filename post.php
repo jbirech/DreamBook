@@ -32,7 +32,7 @@ else
 
     <div class="main_column column" id="main_column">
     <?php
-        $post = new \Postone\Post($con, $userLoggedIn);
+        $post = new Post($con, $userLoggedIn);
         $post->getSinglePost($id);
     ?>
     
