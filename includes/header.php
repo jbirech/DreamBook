@@ -50,10 +50,10 @@ else
         <div clas="search">
 
             <form action="search.php" method="GET" name="search_form">
-                <input type="text" onKeyup="getLiveSearchUser(this.value, '<?php echo $userLoggedIn; ?>')" name="q" placeholder="search..." autocomplete="off" id="search_text_input">
+                <input type="text" onKeyup="getLiveSearchUsers(this.value, '<?php echo $userLoggedIn; ?>')" name="q" placeholder="search..." autocomplete="off" id="search_text_input">
 
                 <div class="button_holder">
-                    <img src="assests/images/icons/search.jpg" >
+                    <img src="../assests/images/icons/search.jpg" >
                 </div>
             </form>
 
