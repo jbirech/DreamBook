@@ -9,6 +9,7 @@
 #    Updated: 2018/08/17 00:09:42 by jobirech         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** # -->
+!DOCTYPE HTML
 
 <?php
 include_once("includes/header.php");

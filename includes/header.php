@@ -20,6 +20,7 @@ else
 }
 ?>
 
+!DOCTYPE HTML
 <html>
 <head>
     <title>Dreambook</title>
