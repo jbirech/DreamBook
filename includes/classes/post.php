@@ -17,6 +17,20 @@ class Post {
 	
 		if($check_empty != "") {
 
+			//Embed a youTube video when user posts a link
+			$body_array = preg_split("/\s+/", $body);
+
+			foreach($body_array as $key => $value)
+			{
+				if(strpos($value, "www.youtube.com/watch?v=") !== false)
+				{
+					$link = preg_split("!&!", $value);
+					$value = preg_replace("!watch\?v=!", "embed/", $link[0]);
+					$value = "<br><iframe width=\'420\' height=\'315\' src=\'" . $value ."\'></iframe><br>";
+					$body_array[$key] = $value;
+				}
+			}
+			$body = implode(" ", $body_array);
 
 			//Current date and time
 			$date_added = date("Y-m-d H:i:s");
@@ -43,6 +57,8 @@ class Post {
 			$num_posts = $this->user_obj->getNumPosts();
 			$num_posts++;
 			$update_query = mysqli_query($this->con, "UPDATE users SET num_posts='$num_posts' WHERE username='$added_by'");
+
+			
 
 		}
 	}
@@ -240,7 +256,7 @@ class Post {
 					$('#post<?php echo $id; ?>').on('click', function(){
 						bootbox.confirm("Are you sure you want to delete this post?", function(result)
 					{
-						$.post("includes/form_handlers/delete_post.php?post_id=<?php echo $id; ?>" {result:result});
+						$.post("includes/form_handlers/delete_post.php?post_id=<?php echo $id; ?>", {result:result});
 
 						if(result)
 							location.reload();

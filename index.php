@@ -1,6 +1,3 @@
-
-<!-- <!DOCTYPE html> -->
-
 <?php
 include_once("includes/header.php");
 include_once("includes/classes/User.php");
