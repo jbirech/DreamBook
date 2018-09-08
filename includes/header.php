@@ -119,7 +119,7 @@ else
                 ?>
             </a>
 
-            <a href="#">
+            <a href="settings.php">
                 <i class="fa fa-cog fa-lg">
                 </i>
             </a>
