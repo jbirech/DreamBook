@@ -58,8 +58,49 @@ class Post {
 			$num_posts++;
 			$update_query = mysqli_query($this->con, "UPDATE users SET num_posts='$num_posts' WHERE username='$added_by'");
 
+			//Add stop words to for removing words we don't want to see on trending trending posts
+			$stopWords = "hel noo d ca cvsd v sd vs ";
 			
+			$stopWords = preg_split("/[\s,]+/", $stopWords);
 
+			$no_puntuation = preg_replace("/[^a-zA-Z 0-9]+/", "", $body);
+
+			//guess if the user is posting a link to something else like article etc..
+			if(strpos($no_puntuation, "height") === false && strpos($no_puntuation, "width") === false 
+					&& strpos($no_puntuation, "http") === false)
+			{
+
+				$no_puntuation = preg_split("/[\s,]+/", $no_puntuation);
+
+				foreach($stopWords as $value)
+				{
+					foreach($no_puntuation as $key => $value2)
+					{
+						if(strtolower($value) == strtolower($value2))
+						{
+							$no_puntuation[$key] = "";
+						}
+					}
+				}
+
+				foreach($no_puntuation as $value)
+				{
+					$this->calculatetrend(ucfirst($value));
+				}
+			}
+		}
+	}
+
+	public function calculateTrend($term)
+	{
+		if($term != '')
+		{
+			$query = mysqli_query($this->con, "SELECT * FROM trends WHERE title='$term'");
+
+			if(mysqli_num_rows($query) == 0)
+				$insert_query = mysqli_query($this->con, "INSERT INTO trends (title, hits) VALUES('$term', '1')");
+			else
+				$insert_query = mysqli_query($this->con, "UPDATE trends SET hits=hits+1 WHERE title='$term'");
 		}
 	}
 
