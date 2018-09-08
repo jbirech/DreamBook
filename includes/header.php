@@ -47,7 +47,7 @@ else
             <a href="index.php">Dreambook</a>
         </div>
 
-        <div clas="search">
+        <div class="search">
 
             <form action="search.php" method="GET" name="search_form">
                 <input type="text" onKeyup="getLiveSearchUsers(this.value, '<?php echo $userLoggedIn; ?>')" name="q" placeholder="search..." autocomplete="off" id="search_text_input">

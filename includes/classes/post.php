@@ -560,8 +560,8 @@ class Post {
 
 					//Timeframe
 					$date_time_now = date("Y-m-d H:i:s");
-					$start_date = new  \DateTime($date_time); //Time of post
-					$end_date = new  \DateTime($date_time_now); //Current time
+					$start_date = new  DateTime($date_time); //Time of post
+					$end_date = new  DateTime($date_time_now); //Current time
 					$interval = $start_date->diff($end_date); //Difference between dates 
 					if($interval->y >= 1) {
 						if($interval == 1)
@@ -645,7 +645,7 @@ class Post {
 
 							</div>
 							<div class='post_comment' id='toggleComment$id' style='display:none;'>
-								<iframe src='comment_frame.php?post_id=$id' id='comment_iframe'></iframe>
+								<iframe src='comment_frame.php?post_id=$id' id='comment_iframe' frameborder='0'></iframe>
 							</div>
 							<hr>";
 				

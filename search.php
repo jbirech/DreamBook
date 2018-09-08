@@ -1,6 +1,8 @@
 <?php
 include_once("includes/header.php");
 
+// $query = "";
+
 if(isset($_GET['g']))
 {
     $query = $_GET['q'];
@@ -62,7 +64,7 @@ else
                 $mutual_friends = $user_obj->getMutualFriends($row['username']) . "Friends in common";
 
                 //Button forms
-                if(isset($_POST[$rowp['username']]))
+                if(isset($_POST[$row['username']]))
                 {
                     if($user_obj->isFriend($row['username']))
                     {

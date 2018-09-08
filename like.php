@@ -58,7 +58,7 @@
 	if(isset($_POST['like_button']))
 	{
 		$total_likes++;
-		$query = mysqli_query($con, "UPDATE posts SET likes WHERE username='$userLoggedIn' AND id='$post_id'");
+		$query = mysqli_query($con, "UPDATE posts SET likes='$total_likes' WHERE id='$post_id'");
 		$total_user_likes++;
 		$user_likes = mysqli_query($con, "UPDATE users SET num_likes='$total_user_likes' WHERE username='$user_liked'");
 		$insert_user = mysqli_query($con, "INSERT INTO likes VALUES('', '$userLoggedIn', '$post_id')");
@@ -67,7 +67,7 @@
 		if($user_liked != $userLoggedIn)
 		{
 			$notifications = new \Note\Notification($con, $userLoggedIn);
-			$notifications->insertNotifications($post_id, $user_liked, "like");
+			$notifications->insertNotification($post_id, $user_liked, "like");
 		}
 	}
 
@@ -75,7 +75,7 @@
 	if(isset($_POST['unlike_button']))
 	{
 		$total_likes--;
-		$query = mysqli_query($con, "UPDATE posts SET likes WHERE username='$userLoggedIn' AND post_id='$post_id'");
+		$query = mysqli_query($con, "UPDATE posts SET likes='$total_likes' WHERE post_id='$post_id'");
 		$total_user_likes--;
 		$user_likes = mysqli_query($con, "UPDATE users SET num_likes='$total_user_likes' WHERE username='$user_liked'");
 		$insert_user = mysqli_query($con, "DELETE FROM likes WHERE username='$userLoggedIn' AND post_id='$post_id'");
@@ -87,7 +87,7 @@
 
 	if ($num_rows > 0)
 	{
-		echo '<form action="like.php?post_id=' . '" method="POST"> 
+		echo '<form action="like.php?post_id=' . $post_id .'" method="POST"> 
 			<input type="submit" class="comment_like" name="unlike_button" value="Unlike">
 			<div class="like_values">
 				'. $total_likes .' Likes
@@ -98,8 +98,8 @@
 	}
 	else
 	{
-		echo '<form action="like.php?post_id=' . '" method="POST"> 
-			<input type="submit" class="comment_like" name="like_button" value="like">
+		echo '<form action="like.php?post_id=' . $post_id . '" method="POST"> 
+			<input type="submit" class="comment_like" name="like_button" value="Like">
 			<div class="like_values">
 				'. $total_likes .' Likes
 			</div>
@@ -110,3 +110,4 @@
     ?>
 
 </body>
+</html>
