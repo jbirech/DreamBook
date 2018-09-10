@@ -56,8 +56,8 @@ if (isset($_POST['post']))
 	}
 
 
-	$post = new Post($con, $userLoggedIn);
-	$post->submitPost($_POST['post_text'], 'none');
+	// $post = new Post($con, $userLoggedIn);
+	// $post->submitPost($_POST['post_text'], 'none', $imageName);
 }
 ?>
 	<div class="user_details column">
