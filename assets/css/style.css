@@ -673,3 +673,11 @@ textarea:focus
     border-radius: 5px;
     color: white;
 }
+
+.postedImage img
+{
+    max-height: 300px;
+    max-width: 100%;
+    display: block;
+    margin: 5px auto;
+}
