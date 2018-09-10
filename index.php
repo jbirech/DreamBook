@@ -1,8 +1,8 @@
 <?php
 include_once("includes/header.php");
-include_once("includes/classes/User.php");
-include_once("includes/classes/post.php");
-include_once("includes/classes/Message.php");
+// include_once("includes/classes/User.php");
+// include_once("includes/classes/post.php");
+// include_once("includes/classes/Message.php");
 
 
 if (isset($_POST['post']))
