@@ -39,13 +39,14 @@ require 'includes/form_handlers/login_handler.php';
 
 			<div class="login_header">
 				<h1>Dreambook</h1>
-				Login or Sign up below!
+				Login or Sign up below for free!
 			</div>
 			<div id="first">
 
 				<form action="register.php" method="POST">
 					<input type="email" name="log_email" placeholder="Email Address"value="<?php 
-					if(isset($_SESSION['log_email'])) {
+					if(isset($_SESSION['log_email'])) 
+					{
 						echo $_SESSION['log_email'];
 					} 
 					?>" required>
@@ -55,8 +56,10 @@ require 'includes/form_handlers/login_handler.php';
 					<br>
 					<input type="submit" name="login_button" value="login">
 					<br>
-					<!-- //if(in_array("Email or password was incorrect<br>", $error_array)) echo "Email or password was incorrect<br>"; -->
-					<?php if(in_array("Email or password was incorrect<br>", $error_array));?> <!--echo "Email or password was incorrect<br>";-->
+					<!-- if(in_array("Email or password was incorrect<br>", $error_array)) echo "Email or password was incorrect<br>";  -->
+
+					<!-- Display an error message if the email or password entered does not match the one in the database -->
+					<?php if(in_array("Email or password was incorrect<br>", $error_array)) echo "Email or password was incorrect<br>";?> 
 					<a href="#" id="signup" class="signup">Don't have an account? Register here!</a>
 
 				</form>
