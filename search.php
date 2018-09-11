@@ -3,14 +3,24 @@ include_once("includes/header.php");
 
 // $query = "";
 
-if(isset($_GET['g']))
+if(isset($_GET['q']))
 {
     $query = $_GET['q'];
 }
 else
 {
-    $type = "name";
+    $query = "";
 }
+
+if(isset($_GET['type']))
+{
+    $type = $_GET['type'];
+}
+else
+{
+    $type = "";
+}
+
 ?>
 
 <div class="main_column" id="main_column">
@@ -19,6 +29,7 @@ else
         echo "You must enter something in the search box.";
     else
     {
+        //if the query contains underscores we assume the user is searching for usernames
         if(type == "username")
             $usersReturnedQuery = mysqli_query($con, "SELECT * FROM users WHERE username LIKE '$query%' AND user_closed='no' LIMIT 8");
         else
@@ -84,7 +95,9 @@ else
 
             }
 
-            echo "<div class='search_results'>
+            //Note for myself later  i added s at the end of class search_results
+            //confusion on which  clas to apply the style when it comes to style.css
+            echo "<div class='search_result'>
                     <div class='searchPageFriendButtons'>
                         <form action='' method='POST'>
                             " . $button ."

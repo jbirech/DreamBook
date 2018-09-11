@@ -19,6 +19,7 @@ include_once("includes/header.php");//Header
             $user_from = $row['user_from'];
             $user_from_obj = new  \One\User($con, $user_from);
 
+            //get the first and last name and print out who sent the friend request
             echo $user_from_obj->getFirstAndLastName() . " sent you a friend request!";
 
             $user_from_friend_array = $user_from_obj->getFriendArray();

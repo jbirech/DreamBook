@@ -78,8 +78,10 @@ if (isset($_POST['post']))
 	</div>
 
 	<div class="main_column column">
+		<!-- Upload picture to a post  -->
 		<form class="post_form" action="index.php" method="POST" enctype="multipart/form-data">
-		<input type="file" name="fileToUpload" id="fileToUpload">
+			<input type="file" name="fileToUpload" id="fileToUpload">
+
 			<textarea name="post_text" id="post_text" placeholder="Got something to say?"></textarea>
 			<input type="submit" name="post" id="post_button" value="Post">
 			<hr>
@@ -116,7 +118,7 @@ if (isset($_POST['post']))
 
 			echo "<div style'padding: 1px'>";
 			echo $trimmed_word . $word_dot;
-			echo "<br></div>";
+			echo "<br></div><br>";
 		}
 		?>
 
@@ -124,7 +126,7 @@ if (isset($_POST['post']))
 
 </div>
 
-<script>
+	<script>
 	var userLoggedIn = '<?php echo $userLoggedIn; ?>';
 
 	$(document).ready(function()
@@ -169,6 +171,7 @@ if (isset($_POST['post']))
 					{
 						$('.posts_area').find('.nextPage').remove(); //Removes current .nextpage
 						$('.posts_area').find('.noMorePosts').remove(); //Removes current .nextpage
+						$('.posts_area').find('.noMorePostsText').remove(); 
 
 						$('#loading').hide();
 						$('.posts_area').append(response);
@@ -181,7 +184,7 @@ if (isset($_POST['post']))
 		});// End (window).scroll(function()
 	});
 
-</script>
+	</script>
 
 </div>
 </body>
