@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<title></title>
@@ -6,7 +7,7 @@
 <body>
 
 	<style type="text/css">
-	*{
+	* {
 		font-family: Arial, Helvetica, Sans-serif;
 	}
 	body{

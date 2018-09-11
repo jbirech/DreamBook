@@ -1,8 +1,8 @@
 <?php
 include_once("includes/header.php");
-include_once("includes/classes/User.php");
-include_once("includes/classes/post.php");
-include_once("includes/classes/Message.php");
+// include_once("includes/classes/User.php");
+// include_once("includes/classes/post.php");
+// include_once("includes/classes/Message.php");
 
 $message_obj = new \Messageone\Message($con, $userLoggedIn);
 
@@ -37,13 +37,13 @@ if(isset($_POST['post_message']))
 		<div class="user_details_left_right">
 			<a href="<?php echo $userLoggedIn; ?>">
 			<?php 
-				echo $user['first_name'] . " " . $user['last_name'];
+			echo $user['first_name'] . " " . $user['last_name'];
 			?>
 			</a>
 			<br>
 			<?php 
-				echo "Posts: " .$user['num_posts']. "<br>";
-				echo "Likes: " .$user['num_likes'];
+			echo "Posts: " .$user['num_posts']. "<br>";
+			echo "Likes: " .$user['num_likes'];
 			?>
 		</div>
     </div>
@@ -53,6 +53,7 @@ if(isset($_POST['post_message']))
         if($user_to != "new")
         {
             echo "<h4> You and <a href='$user_to'>" . $user_to_obj->getFirstAndLastName() . "</a></h4><hr><br>";
+            
             echo "<div class='loaded_messages' id='scroll_messages'>";
                 echo $message_obj->getMessages($user_to);
             echo "</div>";
@@ -70,7 +71,7 @@ if(isset($_POST['post_message']))
                 {
                     echo "Select the friend you would like to message <br><br>";
                     ?>
-                    To: <input type='text' onKeyup='getUsers(this.value, "<?php echo $userLoggedIn; ?>")' name='q' placeholder='Name' autocomplete='off' id='search_text_input'>
+                    To: <input type='text' onkeyup='getUsers(this.value, "<?php echo $userLoggedIn; ?>")' name='q' placeholder='Name' autocomplete='off' id='search_text_input'>
                     
                     <?php
                     echo "<div class='results'></div>";

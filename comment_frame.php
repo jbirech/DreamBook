@@ -1,12 +1,13 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Page Title</title>
+    <title></title>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 </head>
 <body>
     
     <style type="text/css">
-    *{
+    * {
         font_size: 12px;
         font_family: Arial, Helvetica, Sans-serif;
     }
@@ -36,7 +37,7 @@
             var element = document.getElementById("comment_section");
 
             if(element.style.display == "block")
-                element.style.display == "none";
+                element.style.display = "none";
             else
                 element.style.display = "block";
         }
@@ -94,7 +95,7 @@
 
     <form action="comment_frame.php?post_id=<?php echo $post_id; ?>" id="comment_form" name="postComment<?php echo $post_id; ?>" method="POST">
         <textarea name="post_body"></textarea>
-        <input type="submit" name="postComment<?php echo $post_id; ?>" value="post">
+        <input type="submit" name="postComment<?php echo $post_id; ?>" value="Post">
     </form>
 
     <!-- load comments -->
@@ -115,8 +116,8 @@
 
             //Timeframe
             $date_time_now = date("Y-m-d H:i:s");
-            $start_date = new  \DateTime($date_added); //Time of post
-            $end_date = new  \DateTime($date_time_now); //Current time
+            $start_date = new  DateTime($date_added); //Time of post
+            $end_date = new  DateTime($date_time_now); //Current time
             $interval = $start_date->diff($end_date); //Difference between dates 
             if($interval->y >= 1) {
                 if($interval == 1)
