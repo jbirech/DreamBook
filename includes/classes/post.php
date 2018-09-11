@@ -13,7 +13,7 @@ class Post {
 	public function submitPost($body, $user_to, $imageName) {
 		$body = strip_tags($body); //removes html tags 
 		$body = mysqli_real_escape_string($this->con, $body);
-		$check_empty = preg_replace('/\s+/', '', $body); //Deltes all spaces 
+		$check_empty = preg_replace('/\s+/', '', $body); //Deletes all spaces 
 	
 		if($check_empty != "") {
 
@@ -50,7 +50,7 @@ class Post {
 			if($user_to != 'none')
 			{
 				$notifications = new \Note\Notification($this->con, $added_by);
-				$notifications->insertNotifications($returned_id, $user_to, "profile_post");
+				$notifications->insertNotifications($returned_id, $user_to, "like");
 			}
 
 			//Update post count for user 
@@ -67,23 +67,24 @@ class Post {
 
 			//guess if the user is posting a link to something else like article etc..
 			if(strpos($no_puntuation, "height") === false && strpos($no_puntuation, "width") === false 
-					&& strpos($no_puntuation, "http") === false)
+					&& strpos($no_puntuation, "http") === false && strpos($no_puntuation, "youtube") === false)
 			{
+				//convert user's post with puntuations removed into array  split all white spaces
+				$keyWords = preg_replace("/[\s,]+/", $no_punctuation);
 
-				$no_puntuation = preg_split("/[\s,]+/", $no_puntuation);
 
 				foreach($stopWords as $value)
 				{
-					foreach($no_puntuation as $key => $value2)
+					foreach($keyWords as $key => $value2)
 					{
 						if(strtolower($value) == strtolower($value2))
 						{
-							$no_puntuation[$key] = "";
+							$keyWords[$key] = "";
 						}
 					}
 				}
 
-				foreach($no_puntuation as $value)
+				foreach($keyWords as $value)
 				{
 					$this->calculatetrend(ucfirst($value));
 				}
@@ -98,7 +99,7 @@ class Post {
 			$query = mysqli_query($this->con, "SELECT * FROM trends WHERE title='$term'");
 
 			if(mysqli_num_rows($query) == 0)
-				$insert_query = mysqli_query($this->con, "INSERT INTO trends (title, hits) VALUES('$term', '1')");
+				$insert_query = mysqli_query($this->con, "INSERT INTO trends (title,hits) VALUES('$term', '1')");
 			else
 				$insert_query = mysqli_query($this->con, "UPDATE trends SET hits=hits+1 WHERE title='$term'");
 		}
@@ -163,9 +164,10 @@ class Post {
 						$count++;
 					}
 
+					//Delete Post 
 					if($userLoggedIn == $added_by)
 					{
-						$delete_button = "<button class='delete_button btn-danger' id='post$id'>X</button>";
+						$delete_button = "<button class='delete_button btn-danger' id='post$id'>...</button>";
 					}
 					else
 						$delete_button = "";
@@ -298,7 +300,7 @@ class Post {
 
 							</div>
 							<div class='post_comment' id='toggleComment$id' style='display:none;'>
-								<iframe src='comment_frame.php?post_id=$id' id='comment_iframe'></iframe>
+								<iframe src='comment_frame.php?post_id=$id' id='comment_iframe' frameborder='0'></iframe>
 							</div>
 							<hr>";
 				}
@@ -386,16 +388,18 @@ class Post {
 
 
 					//Once 10 posts have been loaded, break
-					if($count > $limit) {
+					if($count > $limit) 
+					{
 						break;
 					}
-					else {
+					else 
+					{
 						$count++;
 					}
 
 					if($userLoggedIn == $added_by)
 					{
-						$delete_button = "<button class='delete_button btn-danger' id='post$id'>X</button>";
+						$delete_button = "<button class='delete_button btn-danger' id='post$id'>...</button>";
 					}
 					else
 						$delete_button = "";
@@ -516,7 +520,7 @@ class Post {
 
 							</div>
 							<div class='post_comment' id='toggleComment$id' style='display:none;'>
-								<iframe src='comment_frame.php?post_id=$id' id='comment_iframe'></iframe>
+								<iframe src='comment_frame.php?post_id=$id' id='comment_iframe' frameborder='0'></iframe>
 							</div>
 							<hr>";
 	
@@ -544,7 +548,7 @@ class Post {
 				$str .= "<input type='hidden' class='nextPage' value='" . ($page + 1) . "'>
 							<input type='hidden' class='noMorePosts' value='false'>";
 			else 
-				$str .= "<input type='hidden' class='noMorePosts' value='true'><p style='text-align: centre;'> No more posts to show! </p>";
+				$str .= "<input type='hidden' class='noMorePosts' value='true'><p style='text-align: centre;' class='noMorePostsText'> No more posts to show! </p>";
 		}
 
 		echo $str;
@@ -577,7 +581,8 @@ class Post {
 				if($row['user_to'] == "none") {
 					$user_to = "";
 				}
-				else {
+				else 
+				{
 					$user_to_obj = new \One\User($this->con, $row['user_to']);
 					$user_to_name = $user_to_obj->getFirstAndLastName();
 					$user_to = "to <a href='" . $row['user_to'] ."'>" . $user_to_name . "</a>";
@@ -594,7 +599,7 @@ class Post {
 				{
 					if($userLoggedIn == $added_by)
 					{
-						$delete_button = "<button class='delete_button btn-danger' id='post$id'>X</button>";
+						$delete_button = "<button class='delete_button btn-danger' id='post$id'>...</button>";
 					}
 					else
 						$delete_button = "";
@@ -607,9 +612,11 @@ class Post {
 					
 					?>
 					<script>
-						function toggle<?php echo $id; ?>()
+						function toggle<?php echo $id; ?>(e)
 						{
-							var target = $(event.target);
+							if( !e ) e = window.event;
+
+							var target = $(e.target);
 							if (!target.is("a"))
 							{
 								var element = document.getElementById("toggleComment<?php echo $id; ?>");

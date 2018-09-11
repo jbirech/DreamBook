@@ -28,7 +28,7 @@ class Notification
 		if($page == 1)
 			$start = 0;
 		else
-			$start = ($page -1) * $limit;
+			$start = ($page - 1) * $limit;
 
 		$set_viewd_query = mysqli_query($this->con, "UPDATE notifications SET viewed='yes' WHERE user_to='$userLoggedIn'");
 
@@ -62,8 +62,8 @@ class Notification
 
 
 			$date_time_now = date("Y-m-d H:i:s");
-			$start_date = new  \DateTime($date_time); //Time of post
-			$end_date = new  \DateTime($row['datetime']); //Current time
+			$start_date = new  DateTime($date_time); //Time of post
+			$end_date = new  DateTime($row['datetime']); //Current time
 			$interval = $start_date->diff($end_date); //Difference between dates 
 			if($interval->y >= 1) {
 				if($interval == 1)
@@ -126,10 +126,10 @@ class Notification
 
 		
 			$opened = $row['opened'];
-			$style = ($row['opened'] == 'no') ? "background-color: #DDEDFF;": "";
+			$style = ($opened == 'no') ? "background-color: #DDEDFF;": "";
 
-			$user_found_obj = new \One\User($this->con, $username);
-			$latest_message_details = $this->getLatestMessage($userLoggedIn, $username);
+			// $user_found_obj = new \One\User($this->con, $username);
+			// $latest_message_details = $this->getLatestMessage($userLoggedIn, $username);
 
 			$return_string .= "<a href='". $row['link'] ."'> 
 									<div class='resultDisplay resultDisplayNotification' style='". $style ."'></div>
@@ -144,7 +144,7 @@ class Notification
 		if($count > $limit)
 			$return_string .= "<input type='hidden' class='nextPageDropdownData' value'" .($page + 1). "'input type='hidden' class='noMoreDropdownData' value='false'>";
 		else
-		$return_string .= "<input type='hidden' class='noMoreDropdowndata' value='true'> <p style='text-align: center;'> No more notifications to load!</p>";
+			$return_string .= "<input type='hidden' class='noMoreDropdowndata' value='true'> <p style='text-align: center;'> No more notifications to load!</p>";
 
 		return $return_string;
 	}
