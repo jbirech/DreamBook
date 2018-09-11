@@ -30,7 +30,7 @@ else
     else
     {
         //if the query contains underscores we assume the user is searching for usernames
-        if(type == "username")
+        if($type == "username")
             $usersReturnedQuery = mysqli_query($con, "SELECT * FROM users WHERE username LIKE '$query%' AND user_closed='no' LIMIT 8");
         else
         {
