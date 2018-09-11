@@ -618,11 +618,11 @@ textarea:focus
     color: white;
 }
 
-.search_result
+/* .search_result
 {
     padding: 10px;
     height: 100px;
-}
+} */
 
 .searchPageFriendButton
 {
