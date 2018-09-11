@@ -7,7 +7,7 @@ include_once("includes/form_handlers/settings_handler.php");
 
     <h4>Account Settings</h4>
     <?php
-    echo "<img src='" . $user['profile_pic'] ."' id='small_profile_pics'>"; 
+    echo "<img src='" . $user['profile_pic'] ."' id='small_profile_pic'>"; 
     ?>
     <br>
     <a href="upload.php">Change profile picture</a><br><br><br>
@@ -24,9 +24,9 @@ include_once("includes/form_handlers/settings_handler.php");
     ?>
 
     <form action="settings.php" method="POST">
-        First Name:<input type="text" name="first_name" value="<?php echo $user['first_name']; ?>"id="settings_input"><br>
-        Last Name:<input type="text" name="last_name" value="<?php echo $user['last_name']; ?>"id="settings_input"><br>
-        Email:<input type="text" name="email" value="<?php echo $user['email']; ?>"id="settings_input"><br>
+        First Name:<input type="text" name="first_name" value="<?php echo $first_name; ?>"id="settings_input"><br>
+        Last Name:<input type="text" name="last_name" value="<?php echo $last_name; ?>"id="settings_input"><br>
+        Email:<input type="text" name="email" value="<?php echo $email; ?>"id="settings_input"><br>
 
         <?php echo $message; ?>
 

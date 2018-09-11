@@ -72,7 +72,7 @@ else
                 else
                     $button = "<input type='submit' name='" . $row['username'] . "' class='success' value='Add friend'>";
 
-                $mutual_friends = $user_obj->getMutualFriends($row['username']) . "Friends in common";
+                $mutual_friends = $user_obj->getMutualFriends($row['username']) . " Friends in common";
 
                 //Button forms
                 if(isset($_POST[$row['username']]))
