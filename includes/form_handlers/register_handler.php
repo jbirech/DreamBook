@@ -98,6 +98,7 @@ if(isset($_POST['register_button'])){
 		$password = md5($password); //Encrypt password before sending to da tabase
 
 		//Generate username by concatenating first name and last name
+		// later on will probably  give the user an opportunity to create their own username
 		$username = strtolower($fname . "_" . $lname);
 		$check_username_query = mysqli_query($con, "SELECT username FROM users WHERE username='$username'");
 
