@@ -47,7 +47,7 @@ if($query != "")
                             ".$row['first_name'] ." " .$row['last_name']."
                             <p style='margin: 0;'>". $row['username'] ."</p>
                             <p id='grey'>".$mutual_friends . "</p>
-                        // </div>
+                        </div>
                     </a>
                 </div>";
         }
