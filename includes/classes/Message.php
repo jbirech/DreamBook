@@ -60,7 +60,7 @@ class Message
             
             //NOTE check on the delete button later on is't working on properly
             //Error message deleteMessage not defined.
-			// $button = "<span class='deleteButton' onclick='deleteMessage($id, this)'>X</span>";
+			$button = "<span class='deleteButton' onclick='deleteMessage($id, this)'>X</span>";
 			$data = $data . $div_top . $button . $body . "</div><br><br>";
 		}
 		return $data;
