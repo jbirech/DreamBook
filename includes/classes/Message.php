@@ -1,5 +1,5 @@
 <?php
-namespace Messageone;
+// namespace Messageone;
 
 class Message 
 {

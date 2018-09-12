@@ -4,7 +4,7 @@ include_once("includes/header.php");
 // include_once("includes/classes/post.php");
 // include_once("includes/classes/Message.php");
 
-$message_obj = new \Messageone\Message($con, $userLoggedIn);
+$message_obj = new Message($con, $userLoggedIn);
 
 if(isset($_GET['u']))
 {

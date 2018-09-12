@@ -69,7 +69,7 @@ else
         <nav>
             <?php
             //unread messages
-               $messages = new \Messageone\Message($con, $userLoggedIn);
+               $messages = new Message($con, $userLoggedIn);
                $num_messages = $messages->getUnreadNumber();
 
                //unread notifications
