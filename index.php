@@ -14,7 +14,8 @@ if (isset($_POST['post']))
 
 	if($imageName != "")
 	{
-		$targetDir = "assets/images/posts/";
+		// "assets/images/posts/";
+		$targetDir = dirname(getcwd);
 		$imageName = $targetDir . uniqid() . basename($imageName);// append image to a unique name so as to not overide other images that have the same name 
 		$imageFileType = pathinfo($imageName, PATHINFO_EXTENSION);
 
