@@ -70,7 +70,7 @@ class Post {
 					&& strpos($no_puntuation, "http") === false && strpos($no_puntuation, "youtube") === false)
 			{
 				//convert user's post with puntuations removed into array  split all white spaces
-				$keyWords = preg_replace("/[\s,]+/", $no_punctuation);
+				$keyWords = preg_replace("/[\s,]+/", $no_puntuation);
 
 
 				foreach($stopWords as $value)
