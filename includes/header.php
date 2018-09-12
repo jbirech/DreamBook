@@ -142,7 +142,7 @@ else
 
 		$('.dropdown_data_window').scroll(function()
 		{
-			var inner_height = $('.dropdown_data_window').innerHeight();//div containing photos
+			var inner_height = $('.dropdown_data_window').innerHeight();//div containing data
 			var scroll_top = $('.dropdown_data_window').scrollTop();
 			var page = $('.dropdown_data_window').find('.nextPageDropdownData').val();
 			var noMoreData = $('.dropdown_data_window').find('.noMoreDropdownData').val();

@@ -44,13 +44,22 @@ $(document). click(function(e)
 
     if(e.target.class != "dropdown_data_window")
     {
-        $(".search_results").html("");
-        $(".search_results").css({"padding" : "0px", "height": "0px"});
+        $(".drop_down_data_window").html("");
+        $(".dropdown_data_window").css({"padding" : "0px", "height": "0px"});
+        // $(".search_results").html("");
+        // $(".search_results").css({"padding" : "0px", "height": "0px"});
         
     }
 });
 
-function getUser(value, user)
+function deleMessage(messageId, element)
+{
+    $.post("includes/handlers/ajax_delete_message.php", {id:messageId}, function(data){
+        $(element).closest(".message").text("Message deleted");
+    });
+}
+
+function getUsers(value, user)
 {
     $.post("includes/handlers/ajax_friend_search.php", {query:value, userLoggedIn:user}, function(data){$(".results").html(data)});
 }
