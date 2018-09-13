@@ -164,7 +164,7 @@ require 'includes/form_handlers/login_handler.php';
 		<div>
 			<span>
 				<a href="Joe_birech.html" tittle="About me"> Joe birech © 2018</a>
-			</span> == $0
+			</span>
 		</div>
 	</footer>
 
