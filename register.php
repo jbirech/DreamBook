@@ -32,6 +32,27 @@ require 'includes/form_handlers/login_handler.php';
 	}
 	?>
 
+	<!-- header section for just the log in part  -->
+	<header>
+		<div class="login">
+			<form action="register.php" method="POST">
+				<input type="email" name="log_email" placeholder="Email Address" value="
+				<?php
+				if(isset($_SESSION['log_email']))
+					echo $_SESSION['log_email'];  
+				?>" required><br>
+
+				<!-- password section-->
+				<input type="password" name="lo_password" placeholder="password">
+				<br>
+				<input type="submit" name-"lodgin_button" value="login">
+				<br>
+				<?php if(in_array("Email or password was incorrect<br>", $error_array)) echo "Email or password was incorrect<br>";?>
+			</form>
+		</div>
+	</header>
+
+	<!-- end of the header section -->
 
 	<div class="wrapper">
 		
@@ -120,5 +141,14 @@ require 'includes/form_handlers/login_handler.php';
 		</div>
 
 	</div>
+
+	<!-- footer section contains some important informations such as privacy policies, cookies, developers section, api's, about page, careers, etc -->
+	<footer>
+		<div class="footer_area">
+			<a href="privacy_policies.html" title="privacy policy"></a>
+		
+		</div>
+	</footer>
+
 </body>
 </html>
