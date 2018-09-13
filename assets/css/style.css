@@ -688,3 +688,10 @@ textarea:focus
     line-height: 1.6;
     margin-left: -20px;
 }
+
+.image_joe
+{
+    height: 350px;
+    margin: 1px 12px 0 2px;
+    float: none;
+}

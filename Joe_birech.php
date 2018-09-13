@@ -10,14 +10,14 @@
 </head>
 <body>
     <!-- A picture of myself-->
-    <section class="image">
+    <section class="image_joe">
         <img src="assets/images/Joe/Joe.png" alt="">
     </section>
 
     <!-- A little bit about myself -->
     <section class="brief_history">
-    NAME: Joe Birech
-    D.0.B: 01/01/1998
+    NAME: Joe Birech <br><br>
+    D.0.B: 01/01/1998<br><br>
     COUNTRY: Kenya
     </section>
 

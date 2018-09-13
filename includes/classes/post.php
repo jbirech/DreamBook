@@ -63,14 +63,14 @@ class Post {
 			
 			$stopWords = preg_split("/[\s,]+/", $stopWords);
 
-			$no_puntuation = preg_replace("/[^a-zA-Z 0-9]+/", "", $body);
+			$no_punctuation = preg_replace("/[^a-zA-Z 0-9]+/", "", $body);
 
 			//guess if the user is posting a link to something else like article etc..
-			if(strpos($no_puntuation, "height") === false && strpos($no_puntuation, "width") === false 
-					&& strpos($no_puntuation, "http") === false && strpos($no_puntuation, "youtube") === false)
+			if(strpos($no_punctuation, "height") === false && strpos($no_punctuation, "width") === false 
+					&& strpos($no_punctuation, "http") === false && strpos($no_punctuation, "youtube") === false)
 			{
 				//convert user's post with puntuations removed into array  split all white spaces
-				$keyWords = preg_replace("/[\s,]+/", $no_puntuation);
+				$keyWords = preg_replace("/[\s,]+/", $no_punctuation);
 
 
 				foreach($stopWords as $value)
