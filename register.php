@@ -145,10 +145,25 @@ require 'includes/form_handlers/login_handler.php';
 	<!-- footer section contains some important informations such as privacy policies, cookies, developers section, api's, about page, careers, etc -->
 	<footer>
 		<div class="footer_area">
-			<a href="privacy_policies.html" title="privacy policy"></a>
+			<ul>
+				<li>
+					<a href="privacy_policies.html" title="privacy policy"></a>
+				</li>
+				<li>
+					<a href="About.html" title="About"></a>
+				</li>
+				<li>
+					<a href="Developers.html" title="Developers"></a>
+				</li>
+				<li>
+					<a href="Mobile.html" title="Mobile App"></a>
+				</li>
+			</ul>
 		
 		</div>
 	</footer>
+
+	<!-- End of footr area -->
 
 </body>
 </html>
