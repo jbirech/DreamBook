@@ -167,7 +167,7 @@ require 'includes/form_handlers/login_handler.php';
 		</div>
 		<div>
 			<span>
-				<a href="Joe_birech.html" tittle="About me"> Joe birech © 2018</a>
+				<a href="Joe_birech.php" tittle="About me"> Joe birech © 2018</a>
 			</span>
 		</div>
 	<!-- </footer> -->
