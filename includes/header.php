@@ -98,7 +98,7 @@ else
             </a>
             
             <a href="javascript:void(0);" onclick="getDropdownData('<?php echo $userLoggedIn; ?>', 'notification')">
-                <i class="fa fa-bell-slash fa-lg">       
+                <i class="fa fa-bell fa-lg">       
                 </i>
                 <?php
                 
