@@ -143,7 +143,7 @@ require 'includes/form_handlers/login_handler.php';
 	</div>
 
 	<!-- footer section contains some important informations such as privacy policies, cookies, developers section, api's, about page, careers, etc -->
-	<footer>
+	<!-- <footer> -->
 		<div class="footer_area">
 			<ul>
 				<li>
@@ -166,7 +166,7 @@ require 'includes/form_handlers/login_handler.php';
 				<a href="Joe_birech.html" tittle="About me"> Joe birech © 2018</a>
 			</span>
 		</div>
-	</footer>
+	<!-- </footer> -->
 
 	<!-- End of footr area -->
 
