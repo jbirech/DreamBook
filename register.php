@@ -33,24 +33,24 @@ require 'includes/form_handlers/login_handler.php';
 	?>
 
 	<!-- header section for just the log in part  -->
-	<header>
+	<!-- <header>
 		<div class="login">
 			<form action="register.php" method="POST">
 				<input type="email" name="log_email" placeholder="Email Address" value="
 				<?php
-				if(isset($_SESSION['log_email']))
-					echo $_SESSION['log_email'];  
+				//if(isset($_SESSION['log_email']))
+				//	echo $_SESSION['log_email'];  
 				?>" required><br>
 
-				<!-- password section-->
-				<input type="password" name="lo_password" placeholder="password">
+				 password section-->
+				<!-- <input type="password" name="lo_password" placeholder="password">
 				<br>
 				<input type="submit" name-"lodgin_button" value="login">
-				<br>
-				<?php if(in_array("Email or password was incorrect<br>", $error_array)) echo "Email or password was incorrect<br>";?>
-			</form>
+				<br> -->
+				<?php //if(in_array("Email or password was incorrect<br>", $error_array)) echo "Email or password was incorrect<br>";?>
+			<!-- </form>
 		</div>
-	</header>
+	</header> --> 
 
 	<!-- end of the header section -->
 
