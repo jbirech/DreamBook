@@ -681,3 +681,10 @@ textarea:focus
     display: block;
     margin: 5px auto;
 }
+
+.footer_area
+{
+    background-color: grey;
+    line-height: 1.6;
+    margin-left: -20px;
+}

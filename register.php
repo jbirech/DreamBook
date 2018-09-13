@@ -147,19 +147,24 @@ require 'includes/form_handlers/login_handler.php';
 		<div class="footer_area">
 			<ul>
 				<li>
-					<a href="privacy_policies.html" title="privacy policy"></a>
+					<a href="privacy_policies.html" title="privacy policy">privacy policy</a>
 				</li>
 				<li>
-					<a href="About.html" title="About"></a>
+					<a href="About.html" title="About">About</a>
 				</li>
 				<li>
-					<a href="Developers.html" title="Developers"></a>
+					<a href="Developers.html" title="Developers">Developers"</a>
 				</li>
 				<li>
-					<a href="Mobile.html" title="Mobile App"></a>
+					<a href="Mobile.html" title="Mobile App">Mobile App</a>
 				</li>
 			</ul>
 		
+		</div>
+		<div>
+			<span>
+				<a href="Joe_birech.html" tittle="About me"> Joe birech © 2018</a>
+			</span> == $0
 		</div>
 	</footer>
 
