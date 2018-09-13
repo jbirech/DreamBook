@@ -16,17 +16,19 @@
 
     <!-- A little bit about myself -->
     <section class="brief_history">
-
+    NAME: Joe Birech
+    D.0.B: 01/01/1998
+    COUNTRY: Kenya
     </section>
 
     <!-- A little bit about my education -->
     <section class="my_education">
-
+    
     </section>
     
     <!--Conclusions and my future ambitions -->
     <section class="conclusion">
-
+    
     </section>
 </body>
 </html>
