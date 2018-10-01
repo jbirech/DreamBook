@@ -12,12 +12,14 @@ class User
         $user_details_query = mysqli_query($con, "SELECT * FROM users WHERE username='$user'");
         $this->user = mysqli_fetch_array($user_details_query);
     }
-
+    
+    //username
     public function getUsername()
     {
         return $this->user['username'];
     }
 
+    //number of friend requests
     public function getNumberOfFriendRequests()
     {
         $username = $this->user['username'];
@@ -57,6 +59,7 @@ class User
         return $row['friend_arrary'];
     }
 
+    //check if user account is closed
     public function isClosed()
     {
         $username = $this->user['username'];
@@ -154,6 +157,12 @@ class User
         }
         return $mutualFriends;
     }
+
+    //invite friends to the platform by entering their phone number or email.
+    // public function inviteFriends()
+    // {
+
+    // }
 }
 
 ?>
