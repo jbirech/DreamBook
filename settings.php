@@ -3,6 +3,24 @@ include_once("includes/header.php");
 include_once("includes/form_handlers/settings_handler.php");
 ?>
 
+<!-- some of the contents to put on the settings
+1. User profile details
+    -hobbies
+    -Date of birth
+    -Country 
+    -where they live
+    -interests
+    -books/movies/music they love etc.
+    -work 
+    -education
+    -current location
+    -relationship status
+2. Account detais
+    -set profile public or private
+
+ -->
+
+
 <div class="main_column column">
 
     <h4>Account Settings</h4>
