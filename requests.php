@@ -22,7 +22,7 @@ include_once("includes/header.php");//Header
             //get the first and last name and print out who sent the friend request
             echo $user_from_obj->getFirstAndLastName() . " sent you a friend request!";
 
-            $user_from_friend_array = $user_from_obj->getFriendArray();
+            $user_from_friend_arrary = $user_from_obj->getFriendArray();
 
             if(isset($_POST['accept_request' . $user_from]))
             {

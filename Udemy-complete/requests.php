@@ -19,11 +19,11 @@ include("includes/header.php"); //Header
 
 			echo $user_from_obj->getFirstAndLastName() . " sent you a friend request!";
 
-			$user_from_friend_array = $user_from_obj->getFriendArray();
+			$user_from_friend_arrary = $user_from_obj->getFriendArray();
 
 			if(isset($_POST['accept_request' . $user_from ])) {
-				$add_friend_query = mysqli_query($con, "UPDATE users SET friend_array=CONCAT(friend_array, '$user_from,') WHERE username='$userLoggedIn'");
-				$add_friend_query = mysqli_query($con, "UPDATE users SET friend_array=CONCAT(friend_array, '$userLoggedIn,') WHERE username='$user_from'");
+				$add_friend_query = mysqli_query($con, "UPDATE users SET friend_arrary=CONCAT(friend_arrary, '$user_from,') WHERE username='$userLoggedIn'");
+				$add_friend_query = mysqli_query($con, "UPDATE users SET friend_arrary=CONCAT(friend_arrary, '$userLoggedIn,') WHERE username='$user_from'");
 
 				$delete_query = mysqli_query($con, "DELETE FROM friend_requests WHERE user_to='$userLoggedIn' AND user_from='$user_from'");
 				echo "You are now friends!";

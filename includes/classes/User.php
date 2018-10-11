@@ -120,13 +120,13 @@ class User
 
         $query = mysqli_query($this->con, "SELECT friend_arrary FROM users WHERE username='$user_to_remove'");
         $row = mysqli_fetch_array($query);
-        $friend_array_username = $row['friend_arrary'];
+        $friend_arrary_username = $row['friend_arrary'];
 
-        $new_friend_array = str_replace($user_to_remove . ",", "", $this->user['friend_arrary']);
-        $remove_friend = mysqli_query($this->con, "UPDATE users SET friend_arrary='$new_friend_array' WHERE username='$logged_in_user'");
+        $new_friend_arrary = str_replace($user_to_remove . ",", "", $this->user['friend_arrary']);
+        $remove_friend = mysqli_query($this->con, "UPDATE users SET friend_arrary='$new_friend_arrary' WHERE username='$logged_in_user'");
 
-        $new_friend_array = str_replace($this->user['username'] . ",", "", $friend_array_username);
-        $remove_friend = mysqli_query($this->con, "UPDATE users SET friend_arrary='$new_friend_array' WHERE username='$user_to_remove'");
+        $new_friend_arrary = str_replace($this->user['username'] . ",", "", $friend_arrary_username);
+        $remove_friend = mysqli_query($this->con, "UPDATE users SET friend_arrary='$new_friend_arrary' WHERE username='$user_to_remove'");
     }
     public function sendRequest($user_to)
     {
