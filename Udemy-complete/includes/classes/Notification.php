@@ -10,9 +10,16 @@ class Notification {
 
 	public function getUnreadNumber() {
 		$userLoggedIn = $this->user_obj->getUsername();
-		$query = mysqli_query($this->con, "SELECT * FROM notifications WHERE viewed='no' AND user_to='$userLoggedIn'");
+		$query = mysqli_query($this->con, "SELECT * FROM notifications WHERE viewd='no' AND user_to='$userLoggedIn'");
 		return mysqli_num_rows($query);
 	}
+
+	// public function getUnreadNumber()
+	// {
+	// 	$userLoggedIn = $this->user_obj->getUsername();
+	// 	$query = mysqli_query($this->con, "SELECT  * FROM notifications WHERE viewed='no' AND user_to='$userLoggedIn'");
+	// 	return   mysqli_num_rows($query);
+	// }
 
 	public function getNotifications($data, $limit) {
 
