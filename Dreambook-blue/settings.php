@@ -44,7 +44,7 @@ include("includes/form_handlers/settings_handler.php");
 		<input type="submit" name="update_password" id="save_details" value="Update Password" class="info settings_submit"><br>
 	</form>
 
-	<h4>Close Account</h4>
+	<h4>Delete Account</h4>
 	<form action="settings.php" method="POST">
 		<input type="submit" name="close_account" id="close_account" value="Close Account" class="danger settings_submit">
 	</form>
