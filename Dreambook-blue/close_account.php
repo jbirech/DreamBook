@@ -18,7 +18,11 @@ if(isset($_POST['close_account'])) {
 
 	<h4>Close Account</h4>
 
-	Are you sure you want to close your account?<br><br>
+	Are you sure you want to close your account?<br>We're sad to see you leave please leave us a feedback below of how we can make our service better for you.<br>
+	
+	<a href="Feedback/delete_feedback.php">feedback</a>
+
+	<br>
 	Closing your account will hide your profile and all your activity from other users.<br><br>
 	You can re-open your account at any time by simply logging in.<br><br>
 
