@@ -19,18 +19,21 @@
 	include("includes/classes/Post.php");
 	include("includes/classes/Notification.php");
 
-	if (isset($_SESSION['username'])) {
+	if (isset($_SESSION['username'])) 
+	{
 		$userLoggedIn = $_SESSION['username'];
 		$user_details_query = mysqli_query($con, "SELECT * FROM users WHERE username='$userLoggedIn'");
 		$user = mysqli_fetch_array($user_details_query);
 	}
-	else {
+	else 
+	{
 		header("Location: register.php");
 	}
 
 	?>
 	<script>
-		function toggle() {
+		function toggle() 
+		{
 			var element = document.getElementById("comment_section");
 
 			if(element.style.display == "block") 
@@ -42,7 +45,8 @@
 
 	<?php  
 	//Get id of post
-	if(isset($_GET['post_id'])) {
+	if(isset($_GET['post_id'])) 
+	{
 		$post_id = $_GET['post_id'];
 	}
 
@@ -52,18 +56,21 @@
 	$posted_to = $row['added_by'];
 	$user_to = $row['user_to'];
 
-	if(isset($_POST['postComment' . $post_id])) {
+	if(isset($_POST['postComment' . $post_id])) 
+	{
 		$post_body = $_POST['post_body'];
 		$post_body = mysqli_escape_string($con, $post_body);
 		$date_time_now = date("Y-m-d H:i:s");
 		$insert_post = mysqli_query($con, "INSERT INTO comments VALUES ('', '$post_body', '$userLoggedIn', '$posted_to', '$date_time_now', 'no', '$post_id')");
 
-		if($posted_to != $userLoggedIn) {
+		if($posted_to != $userLoggedIn) 
+		{
 			$notification = new Notification($con, $userLoggedIn);
 			$notification->insertNotification($post_id, $posted_to, "comment");
 		}
 		
-		if($user_to != 'none' && $user_to != $userLoggedIn) {
+		if($user_to != 'none' && $user_to != $userLoggedIn) 
+		{
 			$notification = new Notification($con, $userLoggedIn);
 			$notification->insertNotification($post_id, $user_to, "profile_comment");
 		}
@@ -71,10 +78,12 @@
 
 		$get_commenters = mysqli_query($con, "SELECT * FROM comments WHERE post_id='$post_id'");
 		$notified_users = array();
-		while($row = mysqli_fetch_array($get_commenters)) {
+		while($row = mysqli_fetch_array($get_commenters)) 
+		{
 
 			if($row['posted_by'] != $posted_to && $row['posted_by'] != $user_to 
-				&& $row['posted_by'] != $userLoggedIn && !in_array($row['posted_by'], $notified_users)) {
+				&& $row['posted_by'] != $userLoggedIn && !in_array($row['posted_by'], $notified_users)) 
+				{
 
 				$notification = new Notification($con, $userLoggedIn);
 				$notification->insertNotification($post_id, $row['posted_by'], "comment_non_owner");
@@ -98,9 +107,11 @@
 	$get_comments = mysqli_query($con, "SELECT * FROM comments WHERE post_id='$post_id' ORDER BY id ASC");
 	$count = mysqli_num_rows($get_comments);
 
-	if($count != 0) {
+	if($count != 0) 
+	{
 
-		while($comment = mysqli_fetch_array($get_comments)) {
+		while($comment = mysqli_fetch_array($get_comments)) 
+		{
 
 			$comment_body = $comment['post_body'];
 			$posted_to = $comment['posted_to'];
@@ -113,61 +124,80 @@
 			$start_date = new DateTime($date_added); //Time of post
 			$end_date = new DateTime($date_time_now); //Current time
 			$interval = $start_date->diff($end_date); //Difference between dates 
-			if($interval->y >= 1) {
+			if($interval->y >= 1) 
+			{
 				if($interval == 1)
 					$time_message = $interval->y . " year ago"; //1 year ago
 				else 
 					$time_message = $interval->y . " years ago"; //1+ year ago
 			}
-			else if ($interval->m >= 1) {
-				if($interval->d == 0) {
+			else if ($interval->m >= 1) 
+			{
+				if($interval->d == 0) 
+				{
 					$days = " ago";
 				}
-				else if($interval->d == 1) {
+				else if($interval->d == 1) 
+				{
 					$days = $interval->d . " day ago";
 				}
-				else {
+				else 
+				{
 					$days = $interval->d . " days ago";
 				}
 
 
-				if($interval->m == 1) {
+				if($interval->m == 1)
+				{
 					$time_message = $interval->m . " month". $days;
 				}
-				else {
+				else 
+				{
 					$time_message = $interval->m . " months". $days;
 				}
 
 			}
-			else if($interval->d >= 1) {
-				if($interval->d == 1) {
+			else if($interval->d >= 1) 
+			{
+				if($interval->d == 1) 
+				{
 					$time_message = "Yesterday";
 				}
-				else {
+				else 
+				{
 					$time_message = $interval->d . " days ago";
 				}
 			}
-			else if($interval->h >= 1) {
-				if($interval->h == 1) {
+			else if($interval->h >= 1) 
+			{
+				if($interval->h == 1) 
+				{
 					$time_message = $interval->h . " hour ago";
 				}
-				else {
+				else 
+				{
 					$time_message = $interval->h . " hours ago";
 				}
 			}
-			else if($interval->i >= 1) {
-				if($interval->i == 1) {
+			else if($interval->i >= 1) 
+			{
+				if($interval->i == 1) 
+				{
 					$time_message = $interval->i . " minute ago";
 				}
-				else {
+				else 
+				{
 					$time_message = $interval->i . " minutes ago";
 				}
 			}
-			else {
-				if($interval->s < 30) {
+			else 
+			{
+				if($interval->s < 30) 
+				{
 					$time_message = "Just now";
 				}
-				else {
+				else 
+				{
 					$time_message = $interval->s . " seconds ago";
 				}
 			}

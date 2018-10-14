@@ -2,32 +2,39 @@
 include("includes/header.php");
 
 
-if(isset($_POST['post'])){
+if(isset($_POST['post']))
+{
 
 	$uploadOk = 1;
 	$imageName = $_FILES['fileToUpload']['name'];
 	$errorMessage = "";
 
-	if($imageName != "") {
+	if($imageName != "") 
+	{
 		$targetDir = "assets/images/posts/";
 		$imageName = $targetDir . uniqid() . basename($imageName);
 		$imageFileType = pathinfo($imageName, PATHINFO_EXTENSION);
 
-		if($_FILES['fileToUpload']['size'] > 10000000) {
+		if($_FILES['fileToUpload']['size'] > 10000000) 
+		{
 			$errorMessage = "Sorry your file is too large";
 			$uploadOk = 0;
 		}
 
-		if(strtolower($imageFileType) != "jpeg" && strtolower($imageFileType) != "png" && strtolower($imageFileType) != "jpg") {
+		if(strtolower($imageFileType) != "jpeg" && strtolower($imageFileType) != "png" && strtolower($imageFileType) != "jpg") 
+		{
 			$errorMessage = "Sorry, only jpeg, jpg and png files are allowed";
 			$uploadOk = 0;
 		}
 
-		if($uploadOk) {
-			if(move_uploaded_file($_FILES['fileToUpload']['tmp_name'], $imageName)) {
+		if($uploadOk) 
+		{
+			if(move_uploaded_file($_FILES['fileToUpload']['tmp_name'], $imageName)) 
+			{
 				//image uploaded okay
 			}
-			else {
+			else 
+			{
 				//image did not upload
 				$uploadOk = 0;
 			}
@@ -35,11 +42,13 @@ if(isset($_POST['post'])){
 
 	}
 
-	if($uploadOk) {
+	if($uploadOk) 
+	{
 		$post = new Post($con, $userLoggedIn);
 		$post->submitPost($_POST['post_text'], 'none', $imageName);
 	}
-	else {
+	else 
+	{
 		echo "<div style='text-align:center;' class='alert alert-danger'>
 				$errorMessage
 			</div>";
@@ -92,7 +101,8 @@ if(isset($_POST['post'])){
 			<?php 
 			$query = mysqli_query($con, "SELECT * FROM trends ORDER BY hits DESC LIMIT 9");
 
-			foreach ($query as $row) {
+			foreach ($query as $row) 
+			{
 				
 				$word = $row['title'];
 				$word_dot = strlen($word) >= 14 ? "..." : "";
@@ -136,7 +146,8 @@ if(isset($_POST['post'])){
 			}
 		});
 
-		$(window).scroll(function() {
+		$(window).scroll(function() 
+		{
 		//$('#load_more').on("click", function() {
 
 			var height = $('.posts_area').height(); //Div containing posts
@@ -144,7 +155,8 @@ if(isset($_POST['post'])){
 			var page = $('.posts_area').find('.nextPage').val();
 			var noMorePosts = $('.posts_area').find('.noMorePosts').val();
 
-			if ((document.body.scrollHeight == document.body.scrollTop + window.innerHeight) && noMorePosts == 'false') {
+			if ((document.body.scrollHeight == document.body.scrollTop + window.innerHeight) && noMorePosts == 'false') 
+			{
 			//if (noMorePosts == 'false') {
 				$('#loading').show();
 
@@ -154,7 +166,8 @@ if(isset($_POST['post'])){
 					data: "page=" + page + "&userLoggedIn=" + userLoggedIn,
 					cache:false,
 
-					success: function(response) {
+					success: function(response) 
+					{
 						$('.posts_area').find('.nextPage').remove(); //Removes current .nextpage 
 						$('.posts_area').find('.noMorePosts').remove(); //Removes current .nextpage 
 						$('.posts_area').find('.noMorePostsText').remove(); //Removes current .nextpage 

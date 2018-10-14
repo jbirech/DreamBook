@@ -7,7 +7,7 @@ require 'includes/form_handlers/login_handler.php';
 
 <html>
 <head>
-	<title>Welcome to Swirlfeed!</title>
+	<title>Dreambook</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/register_style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="assets/js/register.js"></script>
@@ -38,15 +38,17 @@ require 'includes/form_handlers/login_handler.php';
 		<div class="login_box">
 
 			<div class="login_header">
-				<h1>Swirlfeed!</h1>
+				<h1>Dreambook</h1>
 				Login or sign up below!
+				it's free
 			</div>
 			<br>
 			<div id="first">
 
 				<form action="register.php" method="POST">
 					<input type="email" name="log_email" placeholder="Email Address" value="<?php 
-					if(isset($_SESSION['log_email'])) {
+					if(isset($_SESSION['log_email'])) 
+					{
 						echo $_SESSION['log_email'];
 					} 
 					?>" required>
@@ -56,7 +58,7 @@ require 'includes/form_handlers/login_handler.php';
 					<?php if(in_array("Email or password was incorrect<br>", $error_array)) echo  "Email or password was incorrect<br>"; ?>
 					<input type="submit" name="login_button" value="Login">
 					<br>
-					<a href="#" id="signup" class="signup">Need an account? Register here!</a>
+					<a href="#" id="signup" class="signup">Don't have  an account yet? Register here!</a>
 
 				</form>
 
@@ -66,7 +68,8 @@ require 'includes/form_handlers/login_handler.php';
 
 				<form action="register.php" method="POST">
 					<input type="text" name="reg_fname" placeholder="First Name" value="<?php 
-					if(isset($_SESSION['reg_fname'])) {
+					if(isset($_SESSION['reg_fname'])) 
+					{
 						echo $_SESSION['reg_fname'];
 					} 
 					?>" required>
