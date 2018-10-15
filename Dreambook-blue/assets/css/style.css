@@ -21,8 +21,8 @@ a {
 	width: 100%;
 	min-width: 1050px;
 	height: 40px;
-	background-color: #20aae5;
-	border-bottom: 0.25em solid #1894ca;
+	background-color: #0fd28b;
+	border-bottom: 0.25em solid #1cdb0f;
 	margin: 0 0 10px 0;
 	display: inline-flex;
 	position: fixed;
@@ -35,8 +35,8 @@ a {
 	font-size: 30;
 	position: relative;
 	top: 9px;
-	text-shadow: #73B6E2 0.5px 0.5px 0px;
-	color: #1086BA;
+	text-shadow: #0fd28b 0.5px 0.5px 0px;
+	color: #1cdb0f;
 }
 
 a:hover {
