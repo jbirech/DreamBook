@@ -234,8 +234,8 @@ textarea:focus {
 	height: 100%;
 	float: left;
 	position: relative;
-	background-color: #37B0E9;
-	border-right: 10px solid #83D6FE;
+	background-color: blue;
+	border-right: 10px solid lightblue;
 	color: #CBEAF8;
 	margin-right: 20px;
 }
