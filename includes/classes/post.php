@@ -167,7 +167,7 @@ class Post {
 					//Delete Post 
 					if($userLoggedIn == $added_by)
 					{
-						$delete_button = "<button class='delete_button btn-danger' id='post$id'>...</button>";
+						$delete_button = "<button class='delete_button' id='post$id'>...</button>";
 					}
 					else
 						$delete_button = "";
@@ -399,7 +399,7 @@ class Post {
 
 					if($userLoggedIn == $added_by)
 					{
-						$delete_button = "<button class='delete_button btn-danger' id='post$id'>...</button>";
+						$delete_button = "<button class='delete_button ' id='post$id'>...</button>";
 					}
 					else
 						$delete_button = "";
@@ -433,7 +433,7 @@ class Post {
 					$comments_check = mysqli_query($this->con, "SELECT * FROM comments WHERE post_id='$id'");
 					$comments_check_num = mysqli_num_rows($comments_check);
 
-					//Timeframe
+					//Timeframe~displays when exactly the post was posted, time date etc.
 					$date_time_now = date("Y-m-d H:i:s");
 					$start_date = new  \DateTime($date_time); //Time of post
 					$end_date = new  \DateTime($date_time_now); //Current time
@@ -599,7 +599,7 @@ class Post {
 				{
 					if($userLoggedIn == $added_by)
 					{
-						$delete_button = "<button class='delete_button btn-danger' id='post$id'>...</button>";
+						$delete_button = "<button class='delete_button ' id='post$id'>...</button>";
 					}
 					else
 						$delete_button = "";
