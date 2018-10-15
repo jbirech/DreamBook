@@ -35,8 +35,8 @@ a {
 	font-size: 30;
 	position: relative;
 	top: 9px;
-	text-shadow: #0fd28b 0.5px 0.5px 0px;
-	color: #1cdb0f;
+	text-shadow: lightblue 0.5px 0.5px 0px;
+	color: blue;
 }
 
 a:hover {
