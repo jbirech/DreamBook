@@ -21,8 +21,8 @@ a {
 	width: 100%;
 	min-width: 1050px;
 	height: 40px;
-	background-color: #0fd28b;
-	border-bottom: 0.25em solid #1cdb0f;
+	background-color:#1cdb0f ;
+	border-bottom: 0.25em solid #0fd28b;
 	margin: 0 0 10px 0;
 	display: inline-flex;
 	position: fixed;
