@@ -95,7 +95,7 @@ if(isset($_POST['post']))
 
 	<div class="user_details column">
 
-		<h4>Popular</h4>
+		<h4>Trending</h4>
 
 		<div class="trends">
 			<?php 
