@@ -26,8 +26,8 @@ a
 	width: 100%;
 	min-width: 1050px;
 	height: 40px;
-	background-color:#1cdb0f ;
-	border-bottom: 0.25em solid #0fd28b;
+	background-color:rgb(22, 67, 22) ;
+	border-bottom: 0.25em solid rgb(19, 57, 3);
 	margin: 0 0 10px 0;
 	display: inline-flex;
 	position: fixed;
@@ -42,7 +42,7 @@ a
 	position: relative;
 	top: 9px;
 	text-shadow: lightblue 0.5px 0.5px 0px;
-	color: blue;
+	color: rgb(19, 57, 3);
 }
 
 a:hover 
