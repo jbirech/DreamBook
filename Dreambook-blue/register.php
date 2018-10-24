@@ -139,8 +139,34 @@ require 'includes/form_handlers/login_handler.php';
 		</div>
 
 	</div>
+
+
 <!-- privacy policy, developers, cookies, etc-->
 <footer class="extra_details">
+	<div class="footerDetails">
+	<ul>
+		<li>
+			<a href="extras/privacy_policy.php">Privacy Policy</a>
+		</li>
+		<li>
+			<a href="#">Cookies Policy</a>
+		</li>
+		<!-- Invite developers to built features that can be intergrated to the app -->
+		<li>
+			<a href="extras/Developers.php">Developers</a>
+		</li>
+		<li>
+			<a href="#">Mobile App</a>
+		</li>
+		<!-- some users can submit cool feature ideas to have them built -->
+		<li>
+			<a href="">Feature Ideas</a>
+		</li>
+		<li>
+			<a href="extras/About.php">About</a>
+		</li>
+	</ul>
+	</div>
 </footer>
 
 </body>
