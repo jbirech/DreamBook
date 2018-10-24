@@ -80,6 +80,7 @@ nav a:hover
 	padding: 0 10px;
 	width: 75%;
 	min-width: 950px;
+	background-size: cover;
 }
 
 .column 
@@ -682,7 +683,12 @@ textarea:focus
     margin: 5px auto;
 }
 
-
+.list_items
+{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
 
 
 

@@ -144,7 +144,7 @@ require 'includes/form_handlers/login_handler.php';
 <!-- privacy policy, developers, cookies, etc-->
 <footer class="extra_details">
 	<div class="footerDetails">
-	<ul>
+	<ul class="list_items">
 		<li>
 			<a href="extras/privacy_policy.php">Privacy Policy</a>
 		</li>
@@ -165,7 +165,13 @@ require 'includes/form_handlers/login_handler.php';
 		<li>
 			<a href="extras/About.php">About</a>
 		</li>
+		<li>
+			<a href="#">Terms</a>
+		</li>
 	</ul>
+	</div>
+	<div class="copyright">
+					<span> Dreambok © 2018</span>
 	</div>
 </footer>
 
