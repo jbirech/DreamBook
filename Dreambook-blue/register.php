@@ -171,7 +171,7 @@ require 'includes/form_handlers/login_handler.php';
 	</ul>
 	</div>
 	<div class="copyright">
-					<span> Dreambok © 2018</span>
+		<span> Dreambook © 2018</span>
 	</div>
 </footer>
 
