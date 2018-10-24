@@ -151,16 +151,20 @@ require 'includes/form_handlers/login_handler.php';
 		<div class="footer_area">
 			<ul>
 				<li>
-					<a href="privacy_policies.html" title="privacy policy">privacy policy</a>
+				<!-- extras/privacy_policy.php -->
+					<a href="#" title="privacy policy">privacy policy</a>
 				</li>
 				<li>
-					<a href="About.html" title="About">About</a>
+				<!-- extras/About.php -->
+					<a href="#" title="About">About</a>
 				</li>
 				<li>
-					<a href="Developers.html" title="Developers">Developers"</a>
+				<!-- extras/Developers.php -->
+					<a href="#" title="Developers">Developers"</a>
 				</li>
 				<li>
-					<a href="Mobile.html" title="Mobile App">Mobile App</a>
+				<!-- extras/Mobile.php -->
+					<a href="#" title="Mobile App">Mobile App</a>
 				</li>
 			</ul>
 		

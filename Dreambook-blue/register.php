@@ -13,6 +13,21 @@ require 'includes/form_handlers/login_handler.php';
 	<script src="assets/js/register.js"></script>
 </head>
 <body>
+<!--Set up a mini search engine -->
+<header class="header_search">
+	<div class="logo">
+	</div>
+	<div class="searchContainer">
+		<form action="Search/search.php" method="GET">
+		
+			<input class="searchBox" type="text" name="term" placeholder="search from the web...">
+			<input class="searchButton" type="submit" value="Search">
+		
+		</form>
+
+	</div>
+</header>
+
 
 	<?php  
 
@@ -124,7 +139,9 @@ require 'includes/form_handlers/login_handler.php';
 		</div>
 
 	</div>
-
+<!-- privacy policy, developers, cookies, etc-->
+<footer class="extra_details">
+</footer>
 
 </body>
 </html>

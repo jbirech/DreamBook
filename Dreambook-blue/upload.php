@@ -44,7 +44,7 @@ if(isset($_FILES['image']['name'])){
 			$imgSrc= "assets/images/profile_pics/".$file_name; // the image to display in crop area
 			$msg= "Upload Complete!";  	//message to page
 			$src = $file_name;	 		//the file name to post from cropping form to the resize		
-		} 
+		}
 
 /***********************************************************
 	2  - Resize The Image To Fit In Cropping Area
