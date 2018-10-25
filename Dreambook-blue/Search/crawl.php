@@ -14,6 +14,6 @@ function followLinks($url)
     }
 }
 
-$startUrl = "http://www.google.com";
+$startUrl = "http://www.reecekeney.com";
 followLinks($startUrl);
 ?>
