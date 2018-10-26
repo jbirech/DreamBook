@@ -135,6 +135,17 @@ input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hove
 {
     width: 100%;
 }
+.logo
+{
+	float: left;
+	clear: left;
+	text-decoration: none;
+}
+
+.site_details
+{
+	color: #fff;
+}
 
 .header
 {
