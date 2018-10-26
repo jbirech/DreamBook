@@ -164,64 +164,64 @@ require 'includes/form_handlers/login_handler.php';
 
 <!-- privacy policy, developers, cookies, etc-->
 <div class="extra_details">
-	<div class="footerDetails">
-		<ul class="list_items">
-			<li>
-				<a href="extras/privacy_policy.php">Privacy Policy</a>
-			</li>
-		</ul>
+	<div class="f_details">
+		<div class="footerDetails">
+			<ul class="list_items">
+				<li>
+					<a href="extras/privacy_policy.php">Privacy Policy</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="footerDetails">
+			<ul class="list_items">
+				<li>
+				<a href="#">Cookies Policy</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="footerDetails">
+			<ul class="list_items">
+				<li>
+				<a href="extras/Developers.php">Developers</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="footerDetails">
+			<ul class="list_items">
+				<li>
+				<a href="#">Mobile App</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="footerDetails">
+			<ul class="list_items">
+				<li>
+				<a href="">Feature Ideas</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="footerDetails">
+			<ul class="list_items">
+				<li>
+				<a href="extras/About.php">About</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="footerDetails">
+			<ul class="list_items">
+				<li>
+				<a href="#">Terms</a>
+				</li>
+			</ul>
+		</div><hr>
+
 	</div>
-
-	<div class="footerDetails">
-		<ul class="list_items">
-			<li>
-			<a href="#">Cookies Policy</a>
-			</li>
-		</ul>
-	</div>
-
-	<div class="footerDetails">
-		<ul class="list_items">
-			<li>
-			<a href="extras/Developers.php">Developers</a>
-			</li>
-		</ul>
-	</div>
-
-	<div class="footerDetails">
-		<ul class="list_items">
-			<li>
-			<a href="#">Mobile App</a>
-			</li>
-		</ul>
-	</div>
-
-	<div class="footerDetails">
-		<ul class="list_items">
-			<li>
-			<a href="">Feature Ideas</a>
-			</li>
-		</ul>
-	</div>
-
-	<div class="footerDetails">
-		<ul class="list_items">
-			<li>
-			<a href="extras/About.php">About</a>
-			</li>
-		</ul>
-	</div>
-
-
-	<div class="footerDetails">
-		<ul class="list_items">
-			<li>
-			<a href="#">Terms</a>
-			</li>
-		</ul>
-	</div><hr>
-
-
 	<div class="copyright">
 		<span> Dreambook © 2018</span>
 	</div>
