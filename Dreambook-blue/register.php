@@ -160,7 +160,7 @@ require 'includes/form_handlers/login_handler.php';
 		</div>
 
 	</div>
-
+<hr>
 
 <!-- privacy policy, developers, cookies, etc-->
 <div class="extra_details">
@@ -169,28 +169,59 @@ require 'includes/form_handlers/login_handler.php';
 			<li>
 				<a href="extras/privacy_policy.php">Privacy Policy</a>
 			</li>
+		</ul>
+	</div>
+
+	<div class="footerDetails">
+		<ul class="list_items">
 			<li>
-				<a href="#">Cookies Policy</a>
-			</li>
-			<!-- Invite developers to built features that can be intergrated to the app -->
-			<li>
-				<a href="extras/Developers.php">Developers</a>
-			</li>
-			<li>
-				<a href="#">Mobile App</a>
-			</li>
-			<!-- some users can submit cool feature ideas to have them built -->
-			<li>
-				<a href="">Feature Ideas</a>
-			</li>
-			<li>
-				<a href="extras/About.php">About</a>
-			</li>
-			<li>
-				<a href="#">Terms</a>
+			<a href="#">Cookies Policy</a>
 			</li>
 		</ul>
 	</div>
+
+	<div class="footerDetails">
+		<ul class="list_items">
+			<li>
+			<a href="extras/Developers.php">Developers</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="footerDetails">
+		<ul class="list_items">
+			<li>
+			<a href="#">Mobile App</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="footerDetails">
+		<ul class="list_items">
+			<li>
+			<a href="">Feature Ideas</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="footerDetails">
+		<ul class="list_items">
+			<li>
+			<a href="extras/About.php">About</a>
+			</li>
+		</ul>
+	</div>
+
+
+	<div class="footerDetails">
+		<ul class="list_items">
+			<li>
+			<a href="#">Terms</a>
+			</li>
+		</ul>
+	</div><hr>
+
+
 	<div class="copyright">
 		<span> Dreambook © 2018</span>
 	</div>

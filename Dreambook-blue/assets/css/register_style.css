@@ -113,6 +113,17 @@ input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hove
 	display: none;
 }
 
+.extra_details
+{
+	background-color: #60496C;
+}
+
+.footerDetails
+{
+	list-style: none;
+	float: left;
+	clear: left;
+}
 
 /* top bar div search box
 **About
@@ -139,7 +150,7 @@ input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hove
 {
 	float: left;
 	clear: left;
-	text-decoration: none;
+	list-style: none
 }
 
 .site_details
