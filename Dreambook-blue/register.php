@@ -17,16 +17,27 @@ require 'includes/form_handlers/login_handler.php';
 <header class="header_search">
 	<div class="safar_logo">
 		<h1>
-		<u>Safar</u>
+		Safar
 		</h1>
 	</div>
 	<div class="logo">
 		<ul class="site_details">
 			<li>About</li>
+		</ul>
+	</div>
+
+	<div class="logo">
+		<ul class="site_details">
 			<li>Community</li>
+		</ul>
+	</div>
+
+	<div class="logo">
+		<ul class="site_details">
 			<li>Help</li>
 		</ul>
 	</div>
+
 	<div class="searchContainer">
 		<form action="Search/search.php" method="GET">
 		
@@ -80,7 +91,7 @@ require 'includes/form_handlers/login_handler.php';
 					<input type="password" name="log_password" placeholder="Password">
 					<br>
 					<?php if(in_array("Email or password was incorrect<br>", $error_array)) echo  "Email or password was incorrect<br>"; ?>
-					<input type="submit" name="login_button" value="Login">
+					<input type="submit" name="login_button" value="Log in">
 					<br>
 					<a href="#" id="signup" class="signup">Don't have  an account yet? Register here it's free!</a>
 

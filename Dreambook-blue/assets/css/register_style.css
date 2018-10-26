@@ -82,14 +82,14 @@ a
 
 input[type="submit"] 
 {
-	background-color: rgb(22, 67, 22);
-	border: 1px solid rgb(22, 67, 22);
+	background-color: #60496C;
+	border: 1px solid #60496C;
 	border-radius: 3px;
 	margin: 5px 0 10px 0;
 	padding: 5px 10px 5px 10px;
-	color: rgb(7, 30, 14);
-	text-shadow: rgb(7, 30, 14) 0.5px 0.5px 0px;
-	font-family: 'Bellota-BoldItalic', sans-serif;
+	color: #fff;
+	/* text-shadow: rgb(7, 30, 14) 0.5px 0.5px 0px;
+	font-family: 'Bellota-BoldItalic', sans-serif; */
 	font-size: 100%;
 }
 
@@ -114,5 +114,107 @@ input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hove
 }
 
 
+/* top bar div search box
+**About
+**Community
+**Help
+**signup
+**login
+ */
 
+.header_search
+{
+	background-color: #60496C;	
+}
+.safar_logo
+{
+	float: left;
+	color: #fff;
+}
+ .logoContainer
+{
+    width: 100%;
+}
 
+.header
+{
+    background-color: #FAFAFA;
+    border-bottom: 1px solid #ebebeb;
+}
+.Wraper .headerContent
+{
+    display: flex;
+    align-items: center;
+}
+
+.headerContent .logoContainer
+{
+    width: 150px;
+    padding: 5px 20px;
+    box-sizing: border-box;
+}
+.headerContent .searchContainer
+{
+    flex: 1;
+}
+
+.headerContent .searchContainer form{
+    margin: 15px 0 28px 0;
+}
+/* New page */
+.headerContent .searchBarContainer
+{
+    height: 44px;
+    border-radius: 2px;
+    background-color: #fff;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+    width: 70%;
+    max-width: 630px;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.headerContent .searchBarContainer .searchBox
+{
+    flex: 1;
+    border: none;
+    background-color: transparent;
+    padding: 12px;
+    font-size: 16px;
+    color: black;
+}
+
+.tabsContainer
+{
+    margin-left: 150px;
+}
+
+.tabsContainer .tabList
+{
+    padding: 0;
+    margin: 0;
+}
+
+.tabsContainer .tabList li
+{
+    display: inline-block;
+    padding: 0 16px 12px 16px;
+    color: #777;
+    font-size: 13px;
+}
+
+.tabsContainer .tabList li a
+{
+    text-decoration: none;
+}
+
+.tabsContainer .tabList li.active
+{
+    border-bottom: 3px solid blue;
+}
+
+.tabsContainer .tabList li.active a
+{
+    font-weight: bold;
+    color: blue;
+}

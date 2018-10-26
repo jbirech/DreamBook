@@ -22,7 +22,7 @@ else
     <!-- <script src="main.js"></script> -->
 </head>
 <body>
-    <div class="wrapper">
+    <div class="Wraper">
         <div class="header">
             <div class="headerContent">
                 <div class="logoContainer">
