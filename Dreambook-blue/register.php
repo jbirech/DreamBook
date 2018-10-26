@@ -7,7 +7,7 @@ require 'includes/form_handlers/login_handler.php';
 
 <html>
 <head>
-	<title>Dreambook</title>
+	<title>Safar</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/register_style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="assets/js/register.js"></script>
@@ -15,7 +15,17 @@ require 'includes/form_handlers/login_handler.php';
 <body>
 <!--Set up a mini search engine -->
 <header class="header_search">
+	<div class="safar_logo">
+		<h1>
+		<u>Safar</u>
+		</h1>
+	</div>
 	<div class="logo">
+		<ul class="site_details">
+			<li>About</li>
+			<li>Community</li>
+			<li>Help</li>
+		</ul>
 	</div>
 	<div class="searchContainer">
 		<form action="Search/search.php" method="GET">
@@ -53,8 +63,8 @@ require 'includes/form_handlers/login_handler.php';
 		<div class="login_box">
 
 			<div class="login_header">
-				<h1>Dreambook</h1>
-				Login or sign up below!
+				<h1>Safar</h1>
+				<!-- Login or sign up below! -->
 			</div>
 			<br>
 			<div id="first">
@@ -142,38 +152,38 @@ require 'includes/form_handlers/login_handler.php';
 
 
 <!-- privacy policy, developers, cookies, etc-->
-<footer class="extra_details">
+<div class="extra_details">
 	<div class="footerDetails">
-	<ul class="list_items">
-		<li>
-			<a href="extras/privacy_policy.php">Privacy Policy</a>
-		</li>
-		<li>
-			<a href="#">Cookies Policy</a>
-		</li>
-		<!-- Invite developers to built features that can be intergrated to the app -->
-		<li>
-			<a href="extras/Developers.php">Developers</a>
-		</li>
-		<li>
-			<a href="#">Mobile App</a>
-		</li>
-		<!-- some users can submit cool feature ideas to have them built -->
-		<li>
-			<a href="">Feature Ideas</a>
-		</li>
-		<li>
-			<a href="extras/About.php">About</a>
-		</li>
-		<li>
-			<a href="#">Terms</a>
-		</li>
-	</ul>
+		<ul class="list_items">
+			<li>
+				<a href="extras/privacy_policy.php">Privacy Policy</a>
+			</li>
+			<li>
+				<a href="#">Cookies Policy</a>
+			</li>
+			<!-- Invite developers to built features that can be intergrated to the app -->
+			<li>
+				<a href="extras/Developers.php">Developers</a>
+			</li>
+			<li>
+				<a href="#">Mobile App</a>
+			</li>
+			<!-- some users can submit cool feature ideas to have them built -->
+			<li>
+				<a href="">Feature Ideas</a>
+			</li>
+			<li>
+				<a href="extras/About.php">About</a>
+			</li>
+			<li>
+				<a href="#">Terms</a>
+			</li>
+		</ul>
 	</div>
 	<div class="copyright">
 		<span> Dreambook © 2018</span>
 	</div>
-</footer>
+</div>
 
 </body>
 </html>
