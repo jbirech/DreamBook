@@ -14,27 +14,20 @@ require 'includes/form_handlers/login_handler.php';
 </head>
 <body>
 <!--Set up a mini search engine -->
-<header class="header_search">
-	<div class="safar_logo">
+<div class="header_search">
+	<!-- <div class="safar_logo">
 		<h1>
 		Safar
 		</h1>
-	</div>
+	</div> -->
 	<div class="logo">
-		<ul class="site_details">
-			<li>About</li>
-		</ul>
-	</div>
-
-	<div class="logo">
-		<ul class="site_details">
-			<li>Community</li>
-		</ul>
-	</div>
-
-	<div class="logo">
-		<ul class="site_details">
-			<li>Help</li>
+		<ul>
+			<li class="site_details"><a href="#">Safar</a></li>
+			<li class="site_details"><a href="#">About</a></li>
+			<li class="site_details"><a href="#">Community</a></li>
+			<li class="site_details"><a href="#">Help</a></li>
+			<li class="site_details"><a href="#">Signup</a></li>
+			<li class="site_details"><a href="#">Login</a></li>
 		</ul>
 	</div>
 
@@ -47,7 +40,7 @@ require 'includes/form_handlers/login_handler.php';
 		</form>
 
 	</div>
-</header>
+</div>
 
 
 	<?php  
@@ -163,68 +156,29 @@ require 'includes/form_handlers/login_handler.php';
 <hr>
 
 <!-- privacy policy, developers, cookies, etc-->
-<div class="extra_details">
+<!-- <div class="extra_details">
 	<div class="f_details">
-		<div class="footerDetails">
-			<ul class="list_items">
-				<li>
-					<a href="extras/privacy_policy.php">Privacy Policy</a>
-				</li>
-			</ul>
+		<div class="logo"> -->
+			<!-- <span> Dreambook © 2018</span> -->
+			<!-- <ul>
+				<li class="Sit_details"><a href="#">Rumble</a></li>
+				<li class="Sit_details"><a href="#">Terms</a></li>
+				<li class="Sit_details"><a href="#">Privacy policy</a></li>
+				<li class="Sit_details"><a href="#">Cookies</a></li>
+				<li class="Sit_details"><a href="#">Mobile App</a></li>
+				<li class="Sit_details"><a href="#">Feature Ideas</a></li>
+				<li class="Sit_details"><a href="#">Community</a></li>
+				<li class="Sit_details"><a href="#">Sign Up</a></li>
+				<li class="Sit_details"><a href="#">Login</a></li>
+			</ul> -->
+			<!-- <span> Dreambook © 2018</span> -->
+			<!-- &copy; Dreambook 2019.
 		</div>
 
-		<div class="footerDetails">
-			<ul class="list_items">
-				<li>
-				<a href="#">Cookies Policy</a>
-				</li>
-			</ul>
-		</div>
-
-		<div class="footerDetails">
-			<ul class="list_items">
-				<li>
-				<a href="extras/Developers.php">Developers</a>
-				</li>
-			</ul>
-		</div>
-
-		<div class="footerDetails">
-			<ul class="list_items">
-				<li>
-				<a href="#">Mobile App</a>
-				</li>
-			</ul>
-		</div>
-
-		<div class="footerDetails">
-			<ul class="list_items">
-				<li>
-				<a href="">Feature Ideas</a>
-				</li>
-			</ul>
-		</div>
-
-		<div class="footerDetails">
-			<ul class="list_items">
-				<li>
-				<a href="extras/About.php">About</a>
-				</li>
-			</ul>
-		</div>
-
-		<div class="footerDetails">
-			<ul class="list_items">
-				<li>
-				<a href="#">Terms</a>
-				</li>
-			</ul>
-		</div><hr>
-
-	</div>
-	<div class="copyright">
+	</div> -->
+	<!-- <div class="copyright">
 		<span> Dreambook © 2018</span>
-	</div>
+	</div> -->
 </div>
 
 </body>

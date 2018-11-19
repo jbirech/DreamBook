@@ -135,7 +135,8 @@ input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hove
 
 .header_search
 {
-	background-color: #60496C;	
+	background-color: #60496C;
+	
 }
 .safar_logo
 {
@@ -148,14 +149,23 @@ input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hove
 }
 .logo
 {
-	float: left;
-	clear: left;
-	list-style: none
+	text-align: center;
 }
 
+/* header details */
 .site_details
 {
 	color: #fff;
+	display: inline;
+	padding: 10px;
+}
+/* footer contents */
+.Sit_details
+{
+	color: #fff;
+	display: inline;
+	padding: 10px;
+	margin-left: -8px;
 }
 
 .header
@@ -239,4 +249,9 @@ input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hove
 {
     font-weight: bold;
     color: blue;
+}
+
+.list-items
+{
+	display: inline;
 }
