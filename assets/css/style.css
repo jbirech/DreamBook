@@ -267,8 +267,8 @@ textarea:focus
     height: 100%;
     float: left;
     position: relative;
-    background-color: #37B0E9;
-    border-right: 10px solid #83D6FE;
+    background-color: #660066;
+    border-right: 10px solid #60496C;
     color: #CBEAf8;
     margin-right: 20px;
 }

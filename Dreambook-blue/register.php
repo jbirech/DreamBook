@@ -20,7 +20,7 @@ require 'includes/form_handlers/login_handler.php';
 		Safar
 		</h1>
 	</div> -->
-	<div class="logo">
+	<!-- <div class="logo_up">
 		<ul>
 			<li class="site_details"><a href="#">Safar</a></li>
 			<li class="site_details"><a href="#">About</a></li>
@@ -29,9 +29,9 @@ require 'includes/form_handlers/login_handler.php';
 			<li class="site_details"><a href="#">Signup</a></li>
 			<li class="site_details"><a href="#">Login</a></li>
 		</ul>
-	</div>
+	</div> -->
 
-	<div class="searchContainer">
+	<!-- <div class="searchContainer">
 		<form action="Search/search.php" method="GET">
 		
 			<input class="searchBox" type="text" name="term" placeholder="search from the web...">
@@ -39,7 +39,7 @@ require 'includes/form_handlers/login_handler.php';
 		
 		</form>
 
-	</div>
+	</div> -->
 </div>
 
 
@@ -146,6 +146,13 @@ require 'includes/form_handlers/login_handler.php';
 					<br>
 
 					<?php if(in_array("<span style='color: #14C800;'>You're all set! Go ahead and login!</span><br>", $error_array)) echo "<span style='color: #14C800;'>You're all set! Go ahead and login!</span><br>"; ?>
+					<div class="police">
+						<a href="#">
+							By signing up you agree to have read and accepted our <a href="#">terms</a> of service,
+							<a href="#">Privacy</a>  and <a href="#">policy</a>of use.
+						</a>
+					</div>
+					<br>
 					<a href="#" id="signin" class="signin">Already have an account? Sign in here!</a>
 				</form>
 			</div>

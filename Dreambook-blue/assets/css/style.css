@@ -26,8 +26,8 @@ a
 	width: 100%;
 	min-width: 1050px;
 	height: 40px;
-	background-color:rgb(22, 67, 22) ;
-	border-bottom: 0.25em solid rgb(19, 57, 3);
+	background-color: #60496c;
+	border-bottom: 0.25em solid #660066;
 	margin: 0 0 10px 0;
 	display: inline-flex;
 	position: fixed;
@@ -263,16 +263,16 @@ textarea:focus
 .profile_left 
 {
 	top: -10px;
-	width: 17%;
-	max-width: 240px;
-	min-width: 130px;
-	height: 100%;
-	float: left;
-	position: relative;
-	background-color: blue;
-	border-right: 10px solid lightblue;
-	color: #CBEAF8;
-	margin-right: 20px;
+    width: 17%;
+    max-width: 240px;
+    min-width: 130px;
+    height: 100%;
+    float: left;
+    position: relative;
+    background-color: #660066;
+    border-right: 10px solid #60496C;
+    color: #CBEAf8;
+    margin-right: 20px;
 }
 
 .profile_left img 
