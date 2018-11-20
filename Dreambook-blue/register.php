@@ -145,7 +145,9 @@ require 'includes/form_handlers/login_handler.php';
 	</div>
 	<!-- End of class wrapper -->
 	<!-- <span> Dreambook © 2018</span> -->
-<!-- </div> -->
+	<!-- <div id="futa">
+		<p> This is the footer</p>
+	</div> -->
 
 </body>
 </html>

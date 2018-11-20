@@ -51,7 +51,7 @@ a
 	margin-left: auto;
 	top: 7%;
 	width: 35%;
-	background-color: #ffffff;
+	background-color: #fafafa;
 	border: 1px solid #EDEDED;
 	border-radius: 7px;
 	padding: 5px;
@@ -260,4 +260,10 @@ input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hove
 .police
 {
 	color: #fff;
+}
+#futa
+{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
 }
