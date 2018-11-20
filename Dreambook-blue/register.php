@@ -61,6 +61,7 @@ require 'includes/form_handlers/login_handler.php';
 				<h1>Safar</h1>
 				<!-- Login or sign up below! -->
 			</div>
+			<!-- End of class login header -->
 			<br>
 			<div id="first">
 
@@ -82,7 +83,7 @@ require 'includes/form_handlers/login_handler.php';
 				</form>
 
 			</div>
-
+			<!-- End of div first -->
 			<div id="second">
 
 				<form action="register.php" method="POST">
@@ -137,11 +138,14 @@ require 'includes/form_handlers/login_handler.php';
 					<br>
 					<a href="#" id="signin" class="signin">Already have an account? Sign in here!</a>
 				</form>
-			</div>
+			</div> 
+			<!-- End of div second -->
 		</div>
+		<!-- End of class login box -->
 	</div>
+	<!-- End of class wrapper -->
 	<!-- <span> Dreambook © 2018</span> -->
-</div>
+<!-- </div> -->
 
 </body>
 </html>
