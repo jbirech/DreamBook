@@ -14,13 +14,8 @@ require 'includes/form_handlers/login_handler.php';
 </head>
 <body>
 <!--Set up a mini search engine -->
-<div class="header_search">
-	<!-- <div class="safar_logo">
-		<h1>
-		Safar
-		</h1>
-	</div> -->
-	<!-- <div class="logo_up">
+<!-- <div class="header_search"> 
+	 <div class="logo_up">
 		<ul>
 			<li class="site_details"><a href="#">Safar</a></li>
 			<li class="site_details"><a href="#">About</a></li>
@@ -39,10 +34,8 @@ require 'includes/form_handlers/login_handler.php';
 		
 		</form>
 
-	</div> -->
-</div>
-
-
+	</div> 
+</div>-->
 	<?php  
 
 	if(isset($_POST['register_button'])) {
@@ -58,8 +51,6 @@ require 'includes/form_handlers/login_handler.php';
 
 		';
 	}
-
-
 	?>
 
 	<div class="wrapper">
@@ -103,10 +94,7 @@ require 'includes/form_handlers/login_handler.php';
 					?>" required>
 					<br>
 					<?php if(in_array("Your first name must be between 2 and 25 characters<br>", $error_array)) echo "Your first name must be between 2 and 25 characters<br>"; ?>
-					
-					
-
-
+										
 					<input type="text" name="reg_lname" placeholder="Last Name" value="<?php 
 					if(isset($_SESSION['reg_lname'])) {
 						echo $_SESSION['reg_lname'];
@@ -146,46 +134,13 @@ require 'includes/form_handlers/login_handler.php';
 					<br>
 
 					<?php if(in_array("<span style='color: #14C800;'>You're all set! Go ahead and login!</span><br>", $error_array)) echo "<span style='color: #14C800;'>You're all set! Go ahead and login!</span><br>"; ?>
-					<div class="police">
-						<a href="#">
-							By signing up you agree to have read and accepted our <a href="#">terms</a> of service,
-							<a href="#">Privacy</a>  and <a href="#">policy</a>of use.
-						</a>
-					</div>
 					<br>
 					<a href="#" id="signin" class="signin">Already have an account? Sign in here!</a>
 				</form>
 			</div>
-
 		</div>
-
 	</div>
-<hr>
-
-<!-- privacy policy, developers, cookies, etc-->
-<!-- <div class="extra_details">
-	<div class="f_details">
-		<div class="logo"> -->
-			<!-- <span> Dreambook © 2018</span> -->
-			<!-- <ul>
-				<li class="Sit_details"><a href="#">Rumble</a></li>
-				<li class="Sit_details"><a href="#">Terms</a></li>
-				<li class="Sit_details"><a href="#">Privacy policy</a></li>
-				<li class="Sit_details"><a href="#">Cookies</a></li>
-				<li class="Sit_details"><a href="#">Mobile App</a></li>
-				<li class="Sit_details"><a href="#">Feature Ideas</a></li>
-				<li class="Sit_details"><a href="#">Community</a></li>
-				<li class="Sit_details"><a href="#">Sign Up</a></li>
-				<li class="Sit_details"><a href="#">Login</a></li>
-			</ul> -->
-			<!-- <span> Dreambook © 2018</span> -->
-			<!-- &copy; Dreambook 2019.
-		</div>
-
-	</div> -->
-	<!-- <div class="copyright">
-		<span> Dreambook © 2018</span>
-	</div> -->
+	<!-- <span> Dreambook © 2018</span> -->
 </div>
 
 </body>
