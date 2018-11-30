@@ -19,7 +19,7 @@ else {
 
 <html>
 <head>
-	<title>Dreambook</title>
+	<title>ClubMemee</title>
 
 	<!-- Javascript -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -41,7 +41,7 @@ else {
 	<div class="top_bar"> 
 
 		<div class="logo">
-			<a href="index.php">Dreambook</a>
+			<a href="index.php">ClubMemee</a>
 		</div>
 
 
