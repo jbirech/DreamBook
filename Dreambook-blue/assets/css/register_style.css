@@ -43,6 +43,33 @@ a
 	background-size: cover;
 }
 
+.footer_details
+{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #60496C;
+	/*color: white;*/
+	text-align: center;
+}
+.copyright
+{
+	text-align: left;
+	margin-left: 10%;
+	/*color: #3498db;*/
+}
+
+.header_search
+{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #60496C;
+	text-align: center;
+}
+
 .login_box 
 {
 	font-family: 'Bellota-LightItalic', sans-serif;
@@ -133,11 +160,6 @@ input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hove
 **login
  */
 
-.header_search
-{
-	background-color: #60496C;
-	
-}
 .safar_logo
 {
 	float: left;

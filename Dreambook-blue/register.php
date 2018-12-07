@@ -16,17 +16,6 @@ require 'includes/form_handlers/login_handler.php';
 </head>
 <body>
 <!--Set up a mini search engine -->
-<!-- <div class="header_search"> 
-	 <div class="logo_up">
-		<ul>
-			<li class="site_details"><a href="#">Safar</a></li>
-			<li class="site_details"><a href="#">About</a></li>
-			<li class="site_details"><a href="#">Community</a></li>
-			<li class="site_details"><a href="#">Help</a></li>
-			<li class="site_details"><a href="#">Signup</a></li>
-			<li class="site_details"><a href="#">Login</a></li>
-		</ul>
-	</div> -->
 
 	<!-- <div class="searchContainer">
 		<form action="Search/search.php" method="GET">
@@ -144,12 +133,27 @@ require 'includes/form_handlers/login_handler.php';
 			<!-- End of div second -->
 		</div>
 		<!-- End of class login box -->
+		<div class="footer_details">
+			<ul>
+				<li class="site_details"><a href="#">Signup help</a></li>
+				<li class="site_details"><a href="#">Login help</a></li>
+				<li class="site_details"><a href="#">Data policy</a></li>
+				<li class="site_details"><a href="#">About</a></li>
+				<li class="site_details"><a href="#">Community</a></li>
+				<li class="site_details"><a href="#">Terms and Conditions</a></li>
+				<li class="site_details"><a href="#">Cookies</a></li>
+				<li class="site_details"><a href="#">Help</a></li>
+				<li class="site_details"><a href="#">privacy</a></li>
+				<li class="site_details"><a href="#">Developers</a></li>
+				<li class="site_details"><a href="#">Investors</a></li>
+				<li class="site_details"><a href="#">Careers</a></li>
+			</ul>
+			<div class="copyright"><span > ClubMemee © 2019</span></div>
+			<!-- <span > ClubMemee © 2018</span> -->
+		</div>
+		<!-- End of the footer details section-->
 	</div>
 	<!-- End of class wrapper -->
-	<!-- <span> Dreambook © 2018</span> -->
-	<!-- <div id="futa">
-		<p> This is the footer</p>
-	</div> -->
 
 </body>
 </html>
