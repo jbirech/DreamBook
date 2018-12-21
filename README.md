@@ -6,8 +6,8 @@ Meme's are just but a way to showcase their creativity in a fun way.
 Might be informative or purely comedylike.
 
 
-![alt text](https://github.com/jbirech/DreamBook/blob/master/1.png)
+![alt text](https://github.com/jbirech/DreamBook/blob/master/git_pic/1.png)
 
 One can create an account for free and start searching for friends online immediatey, post stuff and also comment on what other people have posted.
 
-![alt text](https://github.com/jbirech/DreamBook/blob/master/2.png)
+![alt text](https://github.com/jbirech/DreamBook/blob/master/git/pic/2.png)
