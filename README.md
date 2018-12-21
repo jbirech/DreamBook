@@ -10,4 +10,4 @@ Might be informative or purely comedylike.
 
 One can create an account for free and start searching for friends online immediatey, post stuff and also comment on what other people have posted.
 
-![alt text](https://github.com/jbirech/DreamBook/blob/master/git/pic/2.png)
+![alt text](https://github.com/jbirech/DreamBook/blob/master/git_pic/2.png)
