@@ -1,5 +1,5 @@
-<?php  
-ob_start();// Turn on output buffering
+<?php
+ob_start(); //Turns on output buffering 
 session_start();
 
 $timezone = date_default_timezone_set("America/los_Angeles");
