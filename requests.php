@@ -11,9 +11,10 @@ include("includes/header.php"); //Header
 	$query = mysqli_query($con, "SELECT * FROM friend_requests WHERE user_to='$userLoggedIn'");
 	if(mysqli_num_rows($query) == 0)
 		echo "You have no friend requests at this time!";
-	else {
-
-		while($row = mysqli_fetch_array($query)) {
+	else 
+	{
+		while($row = mysqli_fetch_array($query)) 
+		{
 			$user_from = $row['user_from'];
 			$user_from_obj = new User($con, $user_from);
 
@@ -21,7 +22,8 @@ include("includes/header.php"); //Header
 
 			$user_from_friend_arrary = $user_from_obj->getFriendArray();
 
-			if(isset($_POST['accept_request' . $user_from ])) {
+			if(isset($_POST['accept_request' . $user_from ])) 
+			{
 				$add_friend_query = mysqli_query($con, "UPDATE users SET friend_arrary=CONCAT(friend_arrary, '$user_from,') WHERE username='$userLoggedIn'");
 				$add_friend_query = mysqli_query($con, "UPDATE users SET friend_arrary=CONCAT(friend_arrary, '$userLoggedIn,') WHERE username='$user_from'");
 
@@ -30,7 +32,8 @@ include("includes/header.php"); //Header
 				header("Location: requests.php");
 			}
 
-			if(isset($_POST['ignore_request' . $user_from ])) {
+			if(isset($_POST['ignore_request' . $user_from ])) 
+			{
 				$delete_query = mysqli_query($con, "DELETE FROM friend_requests WHERE user_to='$userLoggedIn' AND user_from='$user_from'");
 				echo "Request ignored!";
 				header("Location: requests.php");
