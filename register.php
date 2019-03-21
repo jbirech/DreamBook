@@ -50,6 +50,7 @@ require 'includes/form_handlers/login_handler.php';
 
 			<div class="login_header">
 				<h1>ClubMemee</h1>
+				where the fun is...
 				<!-- Login or sign up below! -->
 			</div>
 			<!-- End of class login header -->
@@ -135,16 +136,9 @@ require 'includes/form_handlers/login_handler.php';
 		<!-- End of class login box -->
 		<div class="footer_details">
 			<ul>
-				<li class="site_details"><a href="footer/signup_help.php">Signup help</a></li>
-				<li class="site_details"><a href="footer/login_help.php">Login help</a></li>
-				<li class="site_details"><a href="footer/Data_policy.php">Data policy</a></li>
 				<li class="site_details"><a href="footer/About.php">About</a></li>
-				<li class="site_details"><a href="footer/Community.php">Community</a></li>
-				<li class="site_details"><a href="footer/terms.php">Terms and Conditions</a></li>
-				<li class="site_details"><a href="footer/cookies.php">Cookies</a></li>
-				<li class="site_details"><a href="footer/help.php">Help</a></li>
 				<li class="site_details"><a href="footer/privacy.php">privacy</a></li>
-				<li class="site_details"><a href="footer/Developers.php">Developers</a></li>
+				<li class="site_details"><a href="footer/Developers.php">Developers</a></li> 
 				<li class="site_details"><a href="footer/Investors.php">Investors</a></li>
 				<li class="site_details"><a href="footer/Careers.php">Careers</a></li>
 			</ul>

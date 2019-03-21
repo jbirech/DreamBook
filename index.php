@@ -16,7 +16,7 @@ if(isset($_POST['post']))
 		$imageName = $targetDir . uniqid() . basename($imageName);
 		$imageFileType = pathinfo($imageName, PATHINFO_EXTENSION);
 
-		if($_FILES['fileToUpload']['size'] > 10000000) 
+		if($_FILES['fileToUpload']['size'] > 10000000000) 
 		{
 			$errorMessage = "Sorry your file is too large";
 			$uploadOk = 0;
@@ -81,8 +81,11 @@ if(isset($_POST['post']))
 	<div class="main_column column">
 		<form class="post_form" action="index.php" method="POST" enctype="multipart/form-data">
 			<textarea name="post_text" id="post_text" placeholder="Got something to say?"></textarea>
-			<input type="submit" name="post" id="post_button" value="Post">
-			<input type="file" name="fileToUpload" id="fileToUpload" value="upload"><!--Upload image to post -->
+			<input type="submit" name="post" id="post_button" value="Post">	
+			<input type="file" name="fileToUpload" id="fileToUpload" value="upload" 
+			accept="image/*"
+        	capture style="display:none"><!--Upload image to post -->
+			<img src="assets/images/icons/cam.jpg" id="upfile1" style="cursor:pointer" />
 			<hr>
 
 		</form>

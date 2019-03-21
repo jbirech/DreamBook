@@ -12,16 +12,20 @@
     <div>
         <div class="headstory">
             <h1>About us</h1>
-            <p> This is a small online community for meme and anime fans to connect, 
+            <p> <b>This is a small online community for meme and anime fans to connect, 
             share the fun and know each other. User's create account, then they can add friends whom
             they can communicate together and also see the memes they post. 
             Meme's are just but a way to showcase their creativity in a fun way. 
-            Might be informative or purely comedylike. 
+            Might be informative or purely comedylike. </b>
             </p>
+            <h1>Why use ClubMemee</h1>
+            <li>
+            It's fun
+            </li>
         </div>
         <hr>
         <div class="founders">
-            <h1>Why I ClubMemee</h1>
+            <h1>Privacy policy</h1>
             <p>Pretty much everywhere online today you will see a meme posted, or made from 
             fun moments to even serious moments. ClubMemee is made to enable the meme community
             to go connect with other people just like them and share the experience even host 
@@ -30,11 +34,21 @@
             </p>
         </div><hr>
         <div class="founders">
-            <h1>Founder</h1>
-            <h3>Joe Birech</h3>
+            <h1>Terms and conditions</h1>
             <p>
-            A anime fan and meme lover. Currently in my early 20's still figuring out my life
-            studying in college, coding and anything that sounds cool haha.
+          
+            </p>
+        </div><hr>
+        <div class="founders">
+            <h1>Cookies policy</h1>
+            <p>
+          
+            </p>
+        </div><hr>
+        <div class="founders">
+            <h1>Contacts</h1>
+            <p>
+          
             </p>
         </div>
     </div>
