@@ -84,8 +84,8 @@ if(isset($_POST['post']))
 			<input type="submit" name="post" id="post_button" value="Post">	
 			<input type="file" name="fileToUpload" id="fileToUpload" value="upload" 
 			accept="image/*"
-        	capture style="display:none"><!--Upload image to post -->
-			<img src="assets/images/icons/cam.jpg" id="upfile1" style="cursor:pointer" />
+        	capture style="display:none"><!--Upload image to post, use a camera icon -->
+			<img class="camIcon" src="assets/images/icons/cam.jpg"  />
 			<hr>
 
 		</form>

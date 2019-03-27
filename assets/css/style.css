@@ -556,6 +556,12 @@ textarea:focus
 	margin: 8px 0 0 15%;
 }
 
+/*Camera icon css */
+.camIcon
+{
+	height: 28px;
+	float: left;
+}
 .search #search_text_input 
 {
 	border: thin solid #E5E5E5;
